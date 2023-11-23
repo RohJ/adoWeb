@@ -1,0 +1,56 @@
+<nav class="navbar bg-white fixed-top navbar-transparent" color-on-scroll="500">
+  <div class="container-fluid mx-lg-5">
+      <div class="navbar-translate">
+          <a class="navbar-brand" [routerLink]="['']" placement="bottom">
+            <img [src]="logoPath" height="50px" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+              <span class="navbar-toggler-bar bar1"></span>
+              <span class="navbar-toggler-bar bar2"></span>
+              <span class="navbar-toggler-bar bar3"></span>
+          </button>
+      </div>
+    <!--  <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="white"> -->
+      <div class="collapse navbar-collapse" data-color="white">
+          <ul class="navbar-nav ml-auto">
+              <a ngbDropdown class="nav-item dropdown">
+                  <div class="nav-link dropdown-toggle" ngbDropdownToggle>
+                    <i class="now-ui-icons files_paper" aria-hidden="true"></i>
+                    <p>Church</p>
+                  </div>
+                  <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="headers"><i class="now-ui-icons shopping_box"></i> Cell Groups</a>
+                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="features"><i class="now-ui-icons ui-2_settings-90"></i> Kingdom Kids</a>
+                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="blogs"><i class="now-ui-icons text_align-left"></i> Teens</a>
+                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="teams"><i class="now-ui-icons sport_user-run"></i> Daughters of Zion</a>
+                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="projects"><i class="now-ui-icons education_paper"></i> Prayer & Fellowship</a>
+                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="pricing"><i class="now-ui-icons business_money-coins"></i> Calendar</a>
+                  </div>
+              </a>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/components']">
+                  <i class="now-ui-icons design_app"></i>
+                  <p>Campus</p>
+                </a>
+              </li>
+              <a ngbDropdown class="nav-item dropdown">
+                  <div class="nav-link dropdown-toggle" ngbDropdownToggle>
+                    <i class="now-ui-icons design_image" aria-hidden="true"></i>
+                    <p>Ministries</p>
+                  </div>
+                  <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" [routerLink]="['/examples/aboutus']"><i class="now-ui-icons business_bulb-63"></i> Encounter with God</a>
+                      <a class="dropdown-item" [routerLink]="['/examples/blogpost']"><i class="now-ui-icons text_align-left"></i> Wholeness & Freedom Part I</a>
+                      <a class="dropdown-item" [routerLink]="['/examples/blogposts']"><i class="now-ui-icons design_bullet-list-67"></i> Wholeness & Freedom Part II</a>
+                      <a class="dropdown-item" [routerLink]="['/examples/contactus']"><i class="now-ui-icons location_pin"></i> Global Pastors Conference</a>
+                  </div>
+              </a>
+              <li class="nav-item">
+                  <a class="nav-link btn btn-primary" href="https://www.creative-tim.com/product/now-ui-kit-pro-angular">
+                     <p>Buy now</p>
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
