@@ -569,7 +569,8 @@
         margin: 0 auto;
         text-align: center;
         position: relative;
-        top: 24%;
+        // top: 24%;
+        top: 40% !important;
 
         .h1-seo{
             font-size: 14.8em;
@@ -588,12 +589,12 @@
         }
 
         .h1-reo{
-          font-size: 8rem;
-          text-transform: uppercase;
+          font-size: 4.8rem;
+          // text-transform: uppercase;
           font-weight: 700;
           font-family: 'Poppins', sans-serif;
           z-index: 1;
-          letter-spacing: -5px;
+          // letter-spacing: -5px;
           text-align: start;
           background: #ffedea;
           // background: -moz-linear-gradient(top, #FFFFFF 35%, #c38775 100%);
@@ -632,8 +633,9 @@
     .h3-description{
         z-index: 3;
       //  top: 50%;
-        top: 60%;
-        position: absolute;
+      // top: 60%;
+      // position: absolute;
+        position: relative;
         width: 100%;
         text-align: start;
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.71);
@@ -658,7 +660,7 @@
         background: #220c08;
     }
     .page-header{
-        background: #d0aea8;
+        // background: #d0aea8;
     }
 
 }
@@ -972,7 +974,8 @@ and (min-device-width : 375px)
 and (max-device-width : 667px) {
     .presentation-page{
         .rellax-text-container{
-            top: 20% !important;
+            // top: 20% !important;
+            top: 20%;
         }
 
         .page-header + .section-components{
@@ -986,7 +989,8 @@ and (min-device-width : 375px)
 and (max-device-width : 667px)
 and (orientation : portrait) {
     .presentation-page .rellax-text-container{
-        top: 17% !important;
+        // top: 17% !important;
+        top: 17%;
     }
 }
 
