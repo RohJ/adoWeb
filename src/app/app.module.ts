@@ -3,15 +3,18 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { WebsiteModule } from './website/website.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -19,7 +22,8 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    WebsiteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

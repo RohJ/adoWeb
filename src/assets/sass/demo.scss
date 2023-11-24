@@ -587,6 +587,25 @@
             -webkit-text-fill-color: transparent;
         }
 
+        .h1-reo{
+          font-size: 8rem;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-family: 'Poppins', sans-serif;
+          z-index: 1;
+          letter-spacing: -5px;
+          text-align: start;
+          background: #ffedea;
+          // background: -moz-linear-gradient(top, #FFFFFF 35%, #c38775 100%);
+          // background: -webkit-linear-gradient(top, #FFFFFF 35%, #c38775 100%);
+          // background: linear-gradient(to bottom, #FFFFFF 35%, #c38775 100%);
+          background: -moz-linear-gradient(top, #FFFFFF 65%, #888888 100%);
+          background: -webkit-linear-gradient(top, #FFFFFF 65%, #888888 100%);
+          background: linear-gradient(to bottom, #FFFFFF 65%, #888888 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+      }
+
         .pro{
             position: absolute;
             font-size: 20px;
@@ -612,10 +631,11 @@
     }
     .h3-description{
         z-index: 3;
-        top: 50%;
+      //  top: 50%;
+        top: 60%;
         position: absolute;
         width: 100%;
-        text-align: center;
+        text-align: start;
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.71);
     }
     .category-absolute{
@@ -629,7 +649,7 @@
     }
     .rellax-header-sky{
         z-index: 0;
-        height: 50%;
+      //  height: 50%;
     }
     .rellax-header-buildings{
         z-index: 2;
