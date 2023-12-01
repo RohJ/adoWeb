@@ -9,7 +9,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
-    public logoPath = 'assets/img/AdonaiLogoWhite.png';
+    public logoPath = 'assets/img/adonai_logo.png';
 
     constructor(public location: Location, private element : ElementRef) {
         this.sidebarVisible = true;
