@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WebsiteModule } from './website/website.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { WebsiteComponent } from './website/website.component';
 
@@ -25,7 +26,8 @@ import { FooterComponent } from './shared/footer/footer.component';
     ReactiveFormsModule,
     RouterModule,
     AppRoutingModule,
-    WebsiteModule
+    WebsiteModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
