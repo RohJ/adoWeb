@@ -39,24 +39,8 @@ export class WebsiteComponent implements OnInit, OnDestroy, AfterViewInit {
       next: (data) => {
       this.createData = data;
 
-      console.log(this.createData);
-      console.log('Length - ' + this.createData.items.length);
-
-
-  /*  let keyArr: any[] = Object.keys(this.createData.items)
-      keyArr.forEach((key: any) => {
-        // push object with abbreviation, price and coin to array
-        if(this.createData.items[key].start.date){
-          this.myArray.push({ summary: this.createData.items[key].summary, sdate: this.createData.items[key].start.date });
-        } else{
-          this.myArray.push({ summary: this.createData.items[key].summary, sdate: this.createData.items[key].start.dateTime });
-        }
-      });
-      // ASC
-      this.myArray = this.myArray.sort((a, b) => a.sdate - b.sdate);
-      console.log('myArray - ' + this.myArray);
-  */
-
+      // console.log(this.createData);
+      // console.log('Length - ' + this.createData.items.length);
 
       for (let j = 0; j < this.createData.items.length; j++) {
         // console.log('Date - ' + this.createData.items[j].start.date);
@@ -68,7 +52,7 @@ export class WebsiteComponent implements OnInit, OnDestroy, AfterViewInit {
           this.startDate = Date.parse(this.createData.items[j].start.date);
           // console.log(j + ' start date - ' + this.startDate + '  ' + this.createData.items[j].summary);
           if (this.startDate < this.todayDate) {
-            console.log('Filtered Data ' + this.createData.items[j].summary + '  ' + this.createData.items[j].start.date);
+            // console.log('Filtered Data ' + this.createData.items[j].summary + '  ' + this.createData.items[j].start.date);
             delete this.createData.items[j];
             // this.myArray.push({ summary: this.createData.items[j].summary, sdate: this.createData.items[j].start.date });
             // console.log(this.createData.items[j].summary + '  ' + this.createData.items[j].start.date);
@@ -77,7 +61,7 @@ export class WebsiteComponent implements OnInit, OnDestroy, AfterViewInit {
             this.startDate = Date.parse(this.createData.items[j].start.dateTime);
             // console.log(j + ' start date - ' + this.startDate + '  ' + this.createData.items[j].summary);
             if (this.startDate < this.todayDate) {
-            console.log('Filtered Data ' + this.createData.items[j].summary + '  ' + this.createData.items[j].start.dateTime);
+            // console.log('Filtered Data ' + this.createData.items[j].summary + '  ' + this.createData.items[j].start.dateTime);
             delete this.createData.items[j];
             // this.myArray.push({ summary: this.createData.items[j].summary, sdate: this.createData.items[j].start.dateTime });
             // console.log(this.createData.items[j].summary + '  ' + this.createData.items[j].start.dateTime);
@@ -85,8 +69,8 @@ export class WebsiteComponent implements OnInit, OnDestroy, AfterViewInit {
         }
       }
 
-      console.log(this.createData);
-      console.log('Length - ' + this.createData.items.length);
+      // console.log(this.createData);
+      // console.log('Length - ' + this.createData.items.length);
 
       let keyArr: any[] = Object.keys(this.createData.items)
       keyArr.forEach((key: any) => {
@@ -113,7 +97,7 @@ export class WebsiteComponent implements OnInit, OnDestroy, AfterViewInit {
     },
       error: (err) => {
       // this.createData = JSON.parse(err.error).message;
-      console.log(JSON.parse(err.error).message);
+      // console.log(JSON.parse(err.error).message);
       }
     });
 
