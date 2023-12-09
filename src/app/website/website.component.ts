@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
-import {formatDate} from '@angular/common';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { UserService } from '../_services/user.service';
 
 import * as Rellax from 'rellax';
@@ -29,7 +29,12 @@ export class WebsiteComponent implements OnInit, OnDestroy, AfterViewInit {
   summary ='';
   sdate='';
 
-   constructor(private userAccess: UserService) { }
+   constructor(private userAccess: UserService, config: NgbCarouselConfig) {
+    // customize default values of carousels used by this component tree
+		config.showNavigationArrows = false;
+		config.showNavigationIndicators = false;
+    config.animation = true;
+   }
 
 
   ngOnInit() {

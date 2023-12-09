@@ -204,48 +204,62 @@
                           </div>
                       </div>
                     </div>
-
-                  <!-- <div class="col-6 col-sm-3">
-                      <div class="card card-plain card-form-horizontal">
-                          <div class="card-content">
-                              <span class="badge" style="font-size: 1em; padding: 0.5rem; border-color: #000; background-color: #000;">8:30 AM</span>
-                              <p style="font-size: small; font-weight: 700; color: black; margin-top: 1.5rem; ">SUNDAY</p>
-                              <p style="font-size:large; font-weight: 500; color: black;">English</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-6 col-sm-3">
-                      <div class="card card-plain card-form-horizontal">
-                          <div class="card-content">
-                              <span class="badge" style="font-size: 1em; padding: 0.5rem; border-color: #000; background-color: #000;">11:00 AM</span>
-                              <p style="font-size: small; font-weight: 700; color: black; margin-top: 1.5rem; ">SUNDAY</p>
-                              <p style="font-size:large; font-weight: 500; color: black;">English</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-6 col-sm-3">
-                      <div class="card card-plain card-form-horizontal">
-                          <div class="card-content">
-                              <span class="badge" style="font-size: 1em; padding: 0.5rem; border-color: #000; background-color: #000;">8:00 AM</span>
-                              <p style="font-size: small; font-weight: 700; color: black; margin-top: 1.5rem; ">SUNDAY</p>
-                              <p style="font-size:large; font-weight: 500; color: black;">Tamil</p>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-6 col-sm-3">
-                      <div class="card card-plain card-form-horizontal">
-                          <div class="card-content">
-                              <span class="badge" style="font-size: 1em; padding: 0.5rem;  border-color: #000; background-color: #000;">6:30 PM</span>
-                              <p style="font-size: small; font-weight: 700; color: black; margin-top: 1.5rem; ">SATURDAY</p>
-                              <p style="font-size:large; font-weight: 500; color: black;">Hindi</p>
-                          </div>
-                      </div>
-                  </div>    -->
-
-              </div>
-            <hr *ngIf="i < 3"/>
-      </div>
+                </div>
+                <hr *ngIf="i < 3"/>
+            </div>
+        </div>
     </div>
+    <!-- Carousel Section -->
+    <div class="section" id="carousel" style="background-color: #EAD8F5;">
+        <div class="container">
+            <h2 class="title text-dark">Our Conferences</h2>
+
+              <ngb-carousel id="carousel" [interval]="2000">
+
+                <ng-template ngbSlide>
+                  <div class="row justify-content-center ">
+                    <div class="col-md-10 col-sm-12">
+                      <div class="row">
+                          <img class="d-block col-md-6 col-sm-12" src="assets/img/landing/EWG_carousel.webp" alt="First slide" style="margin-bottom: 1em;">
+                          <div class="col-md-6 col-sm-12">
+                              <p>All of us undergo disappointment, hurt, and trauma; and if not dealt with, can often be held captive to them for life. Having been set free from the spirit of rejection and experienced freedom, Rev. Victor D’Monte set forth on a journey to discover the ministry of deliverance</p>
+                              <button type="button" class="d-flex justify-content-start btn btn-link btn-default border border-white btn-lg text-dark" style="border: 2px solid #111111 !important; font-weight: 600;">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="row justify-content-center">
+                    <div class="col-md-10 col-sm-12">
+                      <div class="row">
+                          <img class="d-block col-md-6 col-sm-12" src="assets/img/landing/WF_carousel.webp" alt="First slide" style="margin-bottom: 1em;">
+                          <div class="col-md-6 col-sm-12">
+                              <p>All of us undergo disappointment, hurt, and trauma; and if not dealt with, can often be held captive to them for life. Having been set free from the spirit of rejection and experienced freedom, Rev. Victor D’Monte set forth on a journey to discover the ministry of deliverance</p>
+                              <button type="button" class="d-flex justify-content-start btn btn-link btn-default border border-white btn-lg text-dark" style="border: 2px solid #111111 !important; font-weight: 600;">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                  <div class="row justify-content-center">
+                    <div class="col-md-10 col-sm-12">
+                      <div class="row">
+                          <img class="d-block col-md-6 col-sm-12" src="assets/img/landing/GPC_carousel.webp" alt="First slide" style="margin-bottom: 1em;">
+                          <div class="col-md-6 col-sm-12">
+                              <p>All of us undergo disappointment, hurt, and trauma; and if not dealt with, can often be held captive to them for life. Having been set free from the spirit of rejection and experienced freedom, Rev. Victor D’Monte set forth on a journey to discover the ministry of deliverance</p>
+                              <button type="button" class="d-flex justify-content-start btn btn-link btn-default border border-white btn-lg text-dark" style="border: 2px solid #111111 !important; font-weight: 600;">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+
+              </ngb-carousel>
+        </div>
+      </div>
+
 <!-- <div class="section section-components" data-background-color="dark-red">
     <div class="container">
         <div class="row">
