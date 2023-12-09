@@ -33,7 +33,7 @@ export class WebsiteComponent implements OnInit, OnDestroy, AfterViewInit {
     // customize default values of carousels used by this component tree
 		config.showNavigationArrows = false;
 		config.showNavigationIndicators = false;
-    config.animation = true;
+    // config.animation = true;
    }
 
 
