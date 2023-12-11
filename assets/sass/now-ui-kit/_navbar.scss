@@ -126,7 +126,7 @@
         width: 37px;
         height: 27px;
         vertical-align: middle;
-        outline: 0;
+        outline: 0 !important;
         cursor: pointer;
 
         &.navbar-toggler-left{
