@@ -114,7 +114,7 @@
             margin: 0 1rem;
             margin-bottom: 15px;
             padding-top: 0;
-            height: 300px;
+            // height: 300px;
           //  overflow-y: scroll;
 
             &:before{
@@ -138,7 +138,8 @@
 
         .dropdown-menu .dropdown-item:focus,
         .dropdown-menu .dropdown-item:hover{
-            color: $white-color;
+            // color: $white-color;
+            color: #E12D33;
             border-radius: $border-radius-small;
         }
 
@@ -157,7 +158,8 @@
             display: block;
             position: relative;
             width: 22px;
-            height: 1px;
+            // height: 1px;
+            height: 3px;
             border-radius: 1px;
           //  background: $white-bg;
             background: darkgrey;
@@ -180,7 +182,8 @@
             width: 24px;
 
             & + .navbar-toggler-bar{
-                margin-top: 5px;
+                // margin-top: 5px;
+                margin-top: 3px;
             }
         }
 

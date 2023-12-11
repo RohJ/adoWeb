@@ -13,38 +13,96 @@
     <!--  <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="white"> -->
       <div class="collapse navbar-collapse" data-color="white">
           <ul class="navbar-nav ml-auto">
-              <a ngbDropdown class="nav-item dropdown">
+              <a ngbDropdown class="nav-item dropdown" style="text-decoration: none;">
                   <div class="nav-link dropdown-toggle" ngbDropdownToggle>
-                    <i class="now-ui-icons files_paper" aria-hidden="true"></i>
-                    <p>Church</p>
+                    <p>CHURCH</p>
                   </div>
                   <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="headers"><i class="now-ui-icons shopping_box"></i> Cell Groups</a>
-                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="features"><i class="now-ui-icons ui-2_settings-90"></i> Kingdom Kids</a>
-                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="blogs"><i class="now-ui-icons text_align-left"></i> Teens</a>
-                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="teams"><i class="now-ui-icons sport_user-run"></i> Daughters of Zion</a>
-                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="projects"><i class="now-ui-icons education_paper"></i> Prayer & Fellowship</a>
-                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="pricing"><i class="now-ui-icons business_money-coins"></i> Calendar</a>
+                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="headers">Cell Groups</a>
+                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="features">Kingdom Kids</a>
+                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="blogs">Teens</a>
+                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="teams">Daughters of Zion</a>
+                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="projects">Prayer & Fellowship</a>
+                      <a class="dropdown-item" [routerLink]="['/sections']" fragment="pricing">Calendar</a>
                   </div>
               </a>
               <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/components']">
-                  <i class="now-ui-icons design_app"></i>
-                  <p>Campus</p>
+                <a class="nav-link" [routerLink]="['/components']" style="text-decoration: none;">
+                  <p>CAMPUS</p>
                 </a>
               </li>
-              <a ngbDropdown class="nav-item dropdown">
+              <a ngbDropdown class="nav-item dropdown" style="text-decoration: none;">
                   <div class="nav-link dropdown-toggle" ngbDropdownToggle>
-                    <i class="now-ui-icons design_image" aria-hidden="true"></i>
-                    <p>Ministries</p>
+                    <p>MINISTRIES</p>
                   </div>
                   <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" [routerLink]="['/examples/aboutus']"><i class="now-ui-icons business_bulb-63"></i> Encounter with God</a>
-                      <a class="dropdown-item" [routerLink]="['/examples/blogpost']"><i class="now-ui-icons text_align-left"></i> Wholeness & Freedom Part I</a>
-                      <a class="dropdown-item" [routerLink]="['/examples/blogposts']"><i class="now-ui-icons design_bullet-list-67"></i> Wholeness & Freedom Part II</a>
-                      <a class="dropdown-item" [routerLink]="['/examples/contactus']"><i class="now-ui-icons location_pin"></i> Global Pastors Conference</a>
+                      <a class="dropdown-item" [routerLink]="['/examples/aboutus']">ENCOUNTER WITH GOD</a>
+                      <a class="dropdown-item" [routerLink]="['/examples/blogpost']">PART - I<br>WHOLENESS & FREEDOM</a>
+                      <a class="dropdown-item" [routerLink]="['/examples/blogposts']">PART - II<br>WHOLENESS & FREEDOM</a>
+                      <a class="dropdown-item" [routerLink]="['/examples/contactus']">GLOBAL PASTORS CONFERENCE</a>
                   </div>
               </a>
+              <a ngbDropdown class="nav-item dropdown" style="text-decoration: none;">
+                <div class="nav-link dropdown-toggle" ngbDropdownToggle>
+                  <p>FAMILY PROGRAMS</p>
+                </div>
+                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" [routerLink]="['/examples/aboutus']">PRE MARITAL</a>
+                    <a class="dropdown-item" [routerLink]="['/examples/blogpost']">MARRIAGE COURSE</a>
+                    <a class="dropdown-item" [routerLink]="['/examples/blogposts']">PARENTING</a>
+                </div>
+              </a>
+              <a ngbDropdown class="nav-item dropdown" style="text-decoration: none;">
+                <div class="nav-link dropdown-toggle" ngbDropdownToggle>
+                  <p>MISSIONS</p>
+                </div>
+                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" [routerLink]="['/examples/aboutus']">EQUIPPING (GEM)</a>
+                    <a class="dropdown-item" [routerLink]="['/examples/blogpost']">OUTREACH</a>
+                </div>
+              </a>
+              <a ngbDropdown class="nav-item dropdown" style="text-decoration: none;">
+                <div class="nav-link dropdown-toggle" ngbDropdownToggle>
+                  <p>SERMONS</p>
+                </div>
+                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" [routerLink]="['/examples/aboutus']">SUNDAY SERMONS</a>
+                    <a class="dropdown-item" [routerLink]="['/examples/blogpost']">SERMON SERIES</a>
+                </div>
+              </a>
+              <a ngbDropdown class="nav-item dropdown" style="text-decoration: none;">
+                <div class="nav-link dropdown-toggle" ngbDropdownToggle>
+                  <p>RESOURCES</p>
+                </div>
+                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" [routerLink]="['/examples/aboutus']">BOOKS</a>
+                </div>
+              </a>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/components']" style="text-decoration: none;">
+                  <p>SERVE</p>
+                </a>
+              </li>
+              <a ngbDropdown class="nav-item dropdown" style="text-decoration: none;">
+                <div class="nav-link dropdown-toggle" ngbDropdownToggle>
+                  <p>ABOUT</p>
+                </div>
+                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" [routerLink]="['/examples/aboutus']">PRE MARITAL</a>
+                    <a class="dropdown-item" [routerLink]="['/examples/blogpost']">MARRIAGE COURSE</a>
+                    <a class="dropdown-item" [routerLink]="['/examples/blogposts']">PARENTING</a>
+                </div>
+              </a>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/components']" style="text-decoration: none;">
+                  <p>GIVE</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/components']" style="text-decoration: none;">
+                  <p>CONTACT</p>
+                </a>
+              </li>
           <!-- <li class="nav-item">
                   <a class="nav-link btn btn-primary" href="https://www.creative-tim.com/product/now-ui-kit-pro-angular">
                      <p>Buy now</p>
