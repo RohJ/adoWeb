@@ -6,6 +6,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 
 import { WebsiteComponent } from './website.component';
+import { CellsComponent } from './church/cells/cells.component';
+import { EwgComponent } from './ministry/ewg/ewg.component';
+import { Wfc1Component } from './ministry/wfc1/wfc1.component';
+import { Wfc2Component } from './ministry/wfc2/wfc2.component';
 
 @NgModule({
     imports: [
@@ -15,7 +19,7 @@ import { WebsiteComponent } from './website.component';
         RouterModule,
         NgbModule
     ],
-    declarations: [ WebsiteComponent ],
+    declarations: [ WebsiteComponent, CellsComponent, EwgComponent, Wfc1Component, Wfc2Component ],
     exports:[ WebsiteComponent ],
     providers: []
 })
