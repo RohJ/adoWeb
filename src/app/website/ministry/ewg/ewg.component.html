@@ -185,9 +185,6 @@
         <div class="col-md-8">
           <ngb-carousel id="carousel" [interval]="2000">
             <ng-template ngbSlide>
-              <img src="assets/img/ewg/ewg_2.webp" alt="First slide" style="margin-bottom: 1em;">
-            </ng-template>
-            <ng-template ngbSlide>
               <img src="assets/img/ewg/ewg_2.webp" alt="Second slide" style="margin-bottom: 1em;">
             </ng-template>
             <ng-template ngbSlide>
@@ -202,20 +199,26 @@
     </div>
   </div>
 <!-- Cost Venue Contact -->
-  <div class="container space-top">
-                  <div class="row text-dark" style="background-color:#E5EDFF;">
+  <div class="section" style="padding-top: 0rem; background-color:#E5EDFF;">
+    <div class="container space-top">
+                  <div class="row text-dark" >
                       <div class="col-sm-3">
                           <div>
-                              <h4 class="title text-dark" style="font-weight: 400;">Cost</h4>
-                              <p>Rs. 700/- <br><em style="font-size:smaller;">Accomodation avaialble<br>at extra cost</em>
-                                 <br><br><em>Attending all sessions is necessary to avail personal ministry.</em>
-                              </p>
+                              <h4 class="title text-dark">Cost</h4>
+                              <h6 style="font-size: small;">Rs. 700/-</h6>
+                              <p><em style="font-size:small;">Accomodation avaialble at extra cost</em></p>
+                                 <h6>For Children</h6>
+                                 <p style="font-size: small;">
+                                  12 Yrs. & Above - Full Cost<br>
+                                  11 Yrs. to 6 Yrs. - 70% Cost<br>
+                                  5 Yrs. & Below - Free
+                                 </p>
                           </div>
                       </div>
                       <div class="col-sm-3">
                           <div >
-                              <h4 class="title text-dark" style="font-weight: 400;">Venue</h4>
-                              <p>Adonai Church
+                              <h4 class="title text-dark">Venue</h4>
+                              <p style="font-size: small;">Adonai Church
                                   <br>No 1-8, 3rd Main Rd,
                                   <br>Hoysala Nagar,
                                   <br>Bangalore 560016.
@@ -223,23 +226,57 @@
                           </div>
                       </div>
                       <div class="col-sm-3">
-                          <div >
-                              <h4 class="title text-dark" style="font-weight: 400;">Time</h4>
-                            <!-- <p>Fri: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6:30 pm – 9 pm<br> -->
-                              <p>Sat: &nbsp;&nbsp;&nbsp;&nbsp;9 am – 5:30 pm<br>
+                          <div>
+                              <h4 class="title text-dark">Time</h4>
+                              <h6>Sat: &nbsp;&nbsp;&nbsp;&nbsp;9 am – 5:30 pm<br>
                                  <br>Sun: &nbsp;&nbsp;8:30 am – 4 pm
-                              </p>
+                              </h6>
                           </div>
                       </div>
                       <div class="col-sm-3">
                           <div >
-                              <h4 class="title text-dark" style="font-weight: 400;">For Registration Contact</h4>
-                              <p>Phone: <br>+91 8048470000<br>
-                                                   <br>Office timings: <br>9:00 am to 4:30 pm <br>(Mon to Fri)
+                              <h4 class="title text-dark">Contact</h4>
+                              <button type="button" class="btn" style="border: 2px solid #000000 !important; background-color: transparent; font-size: small; color: #000000; font-weight: 600;" [routerLink]="['/cells']"><i class="fa fa-phone fa-lg" style="margin-right: 0.5rem; margin-top: 3px;"></i>+91 98123 56789</button>
+                                <h6 style="font-size: small;">Office timings:</h6>
+                                <p style="font-size: small;">9:00 am to 4:30 pm <br>(Mon to Fri)
                                   </p>
                           </div>
                       </div>
                   </div>
+    </div>
   </div>
+  <!-- Testimonies -->
+  <div class="subscribe-line">
+    <div class="container">
+       <div class="text-center">
+            <h2 class="title text-start">Testimonies</h2>
+        </div>
+            <div class="row text-center">
+                <div class="col-md-4 col-sm-12">
+                    <div class="card" style="background-image:url('assets/img/ewg/testimonies.webp'); min-height: 180px; background-repeat: no-repeat; background-position: center;">
+                    </div>
+                    <div class="card-footer text-start">
+                      <h6 class="card-title text-dark">Truth has set me Free</h6>
 
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                  <div class="card" style="background-image:url('assets/img/ewg/testimonies.webp'); min-height: 180px; background-repeat: no-repeat; background-position: center;">
+                  </div>
+                  <div class="card-footer text-start">
+                    <h6 class="card-title text-dark">HEALED FROM SPONDYLITIS</h6>
+
+                </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                  <div class="card" style="background-image:url('assets/img/ewg/testimonies.webp'); min-height: 180px; background-repeat: no-repeat; background-position: center;">
+                  </div>
+                  <div class="card-footer text-start">
+                    <h6 class="card-title text-dark">Freed from Burdens</h6>
+
+                </div>
+                </div>
+            </div>
+    </div>
+  </div>
 </div>
