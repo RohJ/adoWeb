@@ -10,6 +10,8 @@ import { CellsComponent } from './church/cells/cells.component';
 import { EwgComponent } from './ministry/ewg/ewg.component';
 import { Wfc1Component } from './ministry/wfc1/wfc1.component';
 import { Wfc2Component } from './ministry/wfc2/wfc2.component';
+import { KkidsComponent } from './church/kkids/kkids.component';
+import { TeensComponent } from './church/teens/teens.component';
 
 @NgModule({
     imports: [
@@ -19,7 +21,7 @@ import { Wfc2Component } from './ministry/wfc2/wfc2.component';
         RouterModule,
         NgbModule
     ],
-    declarations: [ WebsiteComponent, CellsComponent, EwgComponent, Wfc1Component, Wfc2Component ],
+    declarations: [ WebsiteComponent, CellsComponent, EwgComponent, Wfc1Component, Wfc2Component, KkidsComponent, TeensComponent ],
     exports:[ WebsiteComponent ],
     providers: []
 })
