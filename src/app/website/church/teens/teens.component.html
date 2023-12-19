@@ -3,7 +3,7 @@
       <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/kkids/kkids_banner.webp') ;">
       </div>
   </div>
-  <div class="section">
+  <div class="section" style="padding-bottom: 0em;">
       <div class="container">
           <div class="button-container">
             <div class="card" style="max-width: 650px; background-color: #E5EDFF;">
@@ -21,19 +21,46 @@
       </div>
   </div>
   <!-- Images -->
-  <div class="section section-basic-components">
+  <div class="section section-basic-components" style="padding-top: 0em;">
     <div class="container">
         <div class="row">
-          <div class="image-container">
+          <div class="col-md-3"></div>
+          <div class="image-container col-md-6" style="height: 350px;">
             <!-- <img class="components-macbook" src="assets/img/ipad.png" alt=""> -->
-            <img class="table-img" src="assets/img/teens/teens.webp" alt="">
+            <img class="table-img" src="assets/img/teens/teens.webp" alt="" style="top: 15%; border-radius: 10px; position:absolute ; height: 230px;">
             <!-- <img class="share-btn-img" src="assets/img/teens/teens.webp" alt=""> -->
             <!-- <img class="coloured-card-btn-img" src="assets/img/teens/teens.webp" alt=""> -->
-            <img class="coloured-card-img" src="assets/img/teens/teens.webp" alt="">
+            <img class="coloured-card-img" src="assets/img/teens/teens.webp" alt="" style="left:20%; top: 45%; border-radius: 10px; position: absolute; height: 180px;">
             <!-- <img class="social-img" src="assets/img/teens/teens.webp" alt=""> -->
-            <img class="linkedin-btn-img" src="assets/img/teens/teens.webp" alt="">
+            <img class="linkedin-btn-img" src="assets/img/teens/teens.webp" alt="" style="left: 45%; top: 25%; border-radius: 10px; position: absolute; height: 206px;">
           </div>
+          <div class="col-md-3"></div>
         </div>
     </div>
   </div>
+  <!-- Details -->
+  <div class="section section-testimonials " style="background-color: #EEE;">
+    <div class="mx-3">
+      <div class="card mx-auto" style="max-width: 700px; background-color: #FFF3DC; display: block;">
+        <div class="card-body text-dark">
+          <div class="row">
+            <div class="col-md-6">
+              <h3 class="card-title text-dark text-start" style="font-weight: 600; margin-top: 0em;">Little Wonders</h3>
+              <h6 class="text-start">Below 3 yrs</h6>
+              <p class="text-start" style="font-size: small; font-weight: 500;"> Classes are held after worship during both the first and second services.</p>
+              <h6 class="text-start">9:15 AM for the first service.<br>11:45 AM for the second service.</h6>
+              <hr class="d-md-none d-sm-block">
+            </div>
+            <div class="col-md-6">
+              <h6 class="text-start">Contact</h6>
+              <p class="text-start" style="font-size: x-small;">Coordinator:</p>
+              <p class="text-start" class="author" style="margin-bottom: 0rem;">Sangeetha Raj</p>
+              <button type="button" class="btn" style="border: 2px solid #000000 !important; background-color: transparent; font-size: small; color: #000000; font-weight: 600;" [routerLink]="['/cells']"><i class="fa fa-phone fa-lg" style="margin-right: 0.5rem; margin-top: 3px;"></i>+91 98123 56789</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

@@ -12,6 +12,11 @@ import { Wfc1Component } from './ministry/wfc1/wfc1.component';
 import { Wfc2Component } from './ministry/wfc2/wfc2.component';
 import { KkidsComponent } from './church/kkids/kkids.component';
 import { TeensComponent } from './church/teens/teens.component';
+import { DozComponent } from './church/doz/doz.component';
+import { PrayerComponent } from './church/prayer/prayer.component';
+import { MarriageComponent } from './family/marriage/marriage.component';
+import { PremaritalComponent } from './family/premarital/premarital.component';
+import { ParentingComponent } from './family/parenting/parenting.component';
 
 @NgModule({
     imports: [
@@ -21,7 +26,7 @@ import { TeensComponent } from './church/teens/teens.component';
         RouterModule,
         NgbModule
     ],
-    declarations: [ WebsiteComponent, CellsComponent, EwgComponent, Wfc1Component, Wfc2Component, KkidsComponent, TeensComponent ],
+    declarations: [ WebsiteComponent, CellsComponent, EwgComponent, Wfc1Component, Wfc2Component, KkidsComponent, TeensComponent, DozComponent, PrayerComponent, MarriageComponent, PremaritalComponent, ParentingComponent ],
     exports:[ WebsiteComponent ],
     providers: []
 })

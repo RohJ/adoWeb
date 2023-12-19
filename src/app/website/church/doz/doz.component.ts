@@ -2,17 +2,11 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import * as Rellax from 'rellax';
 
 @Component({
-  selector: 'app-teens',
-  templateUrl: './teens.component.html',
-  styleUrls: ['./teens.component.scss']
+  selector: 'app-doz',
+  templateUrl: './doz.component.html',
+  styleUrls: ['./doz.component.scss']
 })
-export class TeensComponent implements OnInit, AfterViewInit {
-
-  model = {
-    left: true,
-    middle: false,
-    right: false
-};
+export class DozComponent implements OnInit, AfterViewInit {
 
   constructor() { }
 

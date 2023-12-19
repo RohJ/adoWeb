@@ -9,6 +9,11 @@ import { Wfc1Component } from './website/ministry/wfc1/wfc1.component';
 import { Wfc2Component } from './website/ministry/wfc2/wfc2.component';
 import { KkidsComponent } from './website/church/kkids/kkids.component';
 import { TeensComponent } from './website/church/teens/teens.component';
+import { DozComponent } from './website/church/doz/doz.component';
+import { PrayerComponent } from './website/church/prayer/prayer.component';
+import { MarriageComponent } from './website/family/marriage/marriage.component';
+import { PremaritalComponent } from './website/family/premarital/premarital.component';
+import { ParentingComponent } from './website/family/parenting/parenting.component';
 
 const routes: Routes = [
   { path: '',         component: WebsiteComponent },
@@ -17,7 +22,12 @@ const routes: Routes = [
   { path: 'wfc1',         component: Wfc1Component },
   { path: 'wfc2',         component: Wfc2Component },
   { path: 'kkids',         component: KkidsComponent },
-  { path: 'teens',         component: TeensComponent }
+  { path: 'teens',         component: TeensComponent },
+  { path: 'doz',         component: DozComponent },
+  { path: 'prayer',         component: PrayerComponent },
+  { path: 'marriage',         component: MarriageComponent },
+  { path: 'premarital',         component: PremaritalComponent },
+  { path: 'parenting',         component: ParentingComponent }
 ];
 
 @NgModule({
