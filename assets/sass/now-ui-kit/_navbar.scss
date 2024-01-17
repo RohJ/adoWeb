@@ -18,8 +18,9 @@
         margin: 0;
         line-height: 1.8em;
       //  font-size: 1em;
-        font-size: 0.8rem;
-        font-weight: 400;
+        // font-size: 0.8rem;
+        font-size: 0.9rem;
+        font-weight: 600;
     }
 
     &.navbar-absolute{
@@ -53,7 +54,8 @@
 
         .nav-link:not(.btn){
             text-transform: uppercase;
-            font-size: $font-size-mini;
+            // font-size: $font-size-mini;
+            font-size: 0.9rem;
             padding: $padding-base-vertical $padding-base-horizontal;
             line-height: $line-height-nav-link;
 
