@@ -1,8 +1,8 @@
 <nav class="navbar fixed-top navbar-transparent navbar-absolute" color-on-scroll="500">
-  <div class="container-fluid mx-lg-5">
-      <div class="navbar-translate">
+  <div class="container-fluid mx-md-5 mx-3">
+      <div class="navbar-translate mx-md-5">
           <a class="navbar-brand" [routerLink]="['']" placement="bottom">
-            <img [src]="logoPath" height="50px" alt="">
+            <img [src]="logoPath" height="45px" alt="">
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
               <span class="navbar-toggler-bar bar1"></span>
@@ -12,12 +12,12 @@
       </div>
     <!--  <div class="collapse navbar-collapse" data-nav-image="assets/img/blurred-image-1.jpg" data-color="white"> -->
       <div class="collapse navbar-collapse" data-color="white">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto text-end">
               <a ngbDropdown class="nav-item dropdown" style="text-decoration: none;">
                   <div class="nav-link dropdown-toggle" ngbDropdownToggle>
                     <p>CHURCH</p>
                   </div>
-                  <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                  <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right text-end">
                       <a class="dropdown-item" [routerLink]="['/cells']">Cell Groups</a>
                       <a class="dropdown-item" [routerLink]="['/kkids']">Kingdom Kids</a>
                       <a class="dropdown-item" [routerLink]="['/teens']">Teens</a>
@@ -28,14 +28,14 @@
               </a>
               <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/components']" style="text-decoration: none;">
-                  <p>CAMPUS</p>
+                  <p style="margin-right: 0.9em">CAMPUS</p>
                 </a>
               </li>
               <a ngbDropdown class="nav-item dropdown" style="text-decoration: none;">
                   <div class="nav-link dropdown-toggle" ngbDropdownToggle>
                     <p>MINISTRIES</p>
                   </div>
-                  <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                  <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right text-end">
                       <a class="dropdown-item" [routerLink]="['/ewg']">ENCOUNTER WITH GOD</a>
                       <a class="dropdown-item" [routerLink]="['/wfc1']">PART - I<br>WHOLENESS & FREEDOM</a>
                       <a class="dropdown-item" [routerLink]="['/wfc2']">PART - II<br>WHOLENESS & FREEDOM</a>
@@ -46,7 +46,7 @@
                 <div class="nav-link dropdown-toggle" ngbDropdownToggle>
                   <p>FAMILY PROGRAMS</p>
                 </div>
-                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right text-end">
                     <a class="dropdown-item" [routerLink]="['premarital']">PRE MARITAL</a>
                     <a class="dropdown-item" [routerLink]="['marriage']">MARRIAGE COURSE</a>
                     <a class="dropdown-item" [routerLink]="['parenting']">PARENTING</a>
@@ -56,7 +56,7 @@
                 <div class="nav-link dropdown-toggle" ngbDropdownToggle>
                   <p>MISSIONS</p>
                 </div>
-                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right text-end">
                     <a class="dropdown-item" [routerLink]="['/examples/aboutus']">EQUIPPING (GEM)</a>
                     <a class="dropdown-item" [routerLink]="['/examples/blogpost']">OUTREACH</a>
                 </div>
@@ -65,7 +65,7 @@
                 <div class="nav-link dropdown-toggle" ngbDropdownToggle>
                   <p>SERMONS</p>
                 </div>
-                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right text-end">
                     <a class="dropdown-item" [routerLink]="['/examples/aboutus']">SUNDAY SERMONS</a>
                     <a class="dropdown-item" [routerLink]="['/examples/blogpost']">SERMON SERIES</a>
                 </div>
@@ -74,20 +74,20 @@
                 <div class="nav-link dropdown-toggle" ngbDropdownToggle>
                   <p>RESOURCES</p>
                 </div>
-                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right text-end">
                     <a class="dropdown-item" [routerLink]="['/examples/aboutus']">BOOKS</a>
                 </div>
               </a>
               <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/components']" style="text-decoration: none;">
-                  <p>SERVE</p>
+                  <p style="margin-right: 0.9em">SERVE</p>
                 </a>
               </li>
               <a ngbDropdown class="nav-item dropdown" style="text-decoration: none;">
                 <div class="nav-link dropdown-toggle" ngbDropdownToggle>
                   <p>ABOUT</p>
                 </div>
-                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right">
+                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right text-end">
                     <a class="dropdown-item" [routerLink]="['/examples/aboutus']">PRE MARITAL</a>
                     <a class="dropdown-item" [routerLink]="['/examples/blogpost']">MARRIAGE COURSE</a>
                     <a class="dropdown-item" [routerLink]="['/examples/blogposts']">PARENTING</a>
@@ -95,12 +95,12 @@
               </a>
               <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/components']" style="text-decoration: none;">
-                  <p>GIVE</p>
+                  <p style="margin-right: 0.9em">GIVE</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/components']" style="text-decoration: none;">
-                  <p>CONTACT</p>
+                  <p style="margin-right: 0.9em">CONTACT</p>
                 </a>
               </li>
           <!-- <li class="nav-item">
