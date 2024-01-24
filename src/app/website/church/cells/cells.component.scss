@@ -6,7 +6,7 @@
 
 .glide__arrow {
   position: relative;
-  display:inline-block;
+  // display:inline-block;
   top: 15px;
   // bottom: -70px;
   z-index: 2;
@@ -25,10 +25,11 @@
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   line-height: 1;
+  float: right;
 }
 
 .glide__arrow--left {
-  left: 1em;
+  left: -5em;
 }
 
 .glide__arrow--right {
