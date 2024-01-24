@@ -93,7 +93,7 @@ export class WebsiteComponent implements OnInit, OnDestroy, AfterViewInit {
       this.sortedArray = this.myArray.sort((a: any, b: any) => {
         return <any>new Date(a.sdate) - <any>new Date(b.sdate);
       });
-      console.log(this.sortedArray);
+      // console.log(this.sortedArray);
 
       /* for (let i = 0; i < 3; i++) {
         console.log(this.createData);
