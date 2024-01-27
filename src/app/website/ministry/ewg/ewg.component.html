@@ -1,37 +1,37 @@
 <div class="wrapper">
   <div class="page-header page-header-small">
-      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/ewg/ewg_banner.webp') ;">
+      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('https://placehold.co/1920x640/grey/white.webp?text=EWG') ;">
       </div>
   </div>
-  <div class="section">
+  <div class="section" style="padding-bottom: 30px;">
       <div class="container">
-          <div class="button-container">
-            <div class="card" style="max-width: 650px; background-color: #E5EDFF;">
+          <div class="button-container mx-3">
+            <div class="card tagcard" style="background-color: #E5EDFF;">
               <div class="card-body text-dark">
-                <p style="margin-bottom: auto;">Freedom Over a Weekend</p>
+                <p class="tagline">Freedom Over a Weekend</p>
               </div>
             </div>
           </div>
-          <p class="text-start mx-3" style="margin-top: 1rem; font-size: small; font-weight: 600;">The Encounter with God is a weekend programme that enables people to live life in abundance and experience freedom from rejection, curses and other areas they are struggling with. The teachings help establish a Godly foundation and answer various questions that people have about God.Through these programmes, we have witnessed many people healed and restored to wholeness through the understanding that comes from experiencing The love of God. The programme caters to people across various denominations and geographic locations.</p>
-          <p class="text-start mx-3" style="margin-top: 1rem; font-size: small; font-weight: 600;">Attending all sessions is necessary to avail personal ministry.</p>
+          <p class="intro">The Encounter with God is a weekend programme that enables people to live life in abundance and experience freedom from rejection, curses and other areas they are struggling with. The teachings help establish a Godly foundation and answer various questions that people have about God.Through these programmes, we have witnessed many people healed and restored to wholeness through the understanding that comes from experiencing The love of God. The programme caters to people across various denominations and geographic locations.</p>
+          <p class="intro">Attending all sessions is necessary to avail personal ministry.</p>
       </div>
   </div>
   <div class="container">
-    <div class="row mx-2">
+    <div class="row mx-3">
       <div class="card text-center mx-auto" style="max-width: 650px; background-color: #000;">
         <div class="card-body text-white">
           <h6 style="margin-bottom: auto;">*PERSONAL MINISTRY AND CONFIDENTIALITY</h6>
-          <p style="margin-top: 1rem; font-size: small;">The delegates have the opportunity to receive personal ministry towards the end of the programme. We ensure that the highest value of confidentiality is maintained with those who are ministering to the delegates.</p>
+          <p style="margin-top: 1rem; ">The delegates have the opportunity to receive personal ministry towards the end of the programme. We ensure that the highest value of confidentiality is maintained with those who are ministering to the delegates.</p>
         </div>
       </div>
     </div>
   </div>
   <!-- Upcoming Dates -->
-  <div class="subscribe-line" data-background-color="white">
-    <div class="container mx-md-5">
+  <div class="subscribe-line mx-3" data-background-color="white">
+    <div class="container">
           <h3 class="title text-dark text-md-start" style="margin-bottom: 2rem;">Upcoming Dates</h3>
             <div class="text-dark text-center mx-auto">
-              <div class="row ">
+              <!-- <div class="row ">
                   <div class="col-md-8 col-sm-12">
                             <div class="row mx-auto">
                               <div class="col-4 col-md-4">
@@ -49,7 +49,7 @@
                             <button type="button" class="btn text-dark" style="border: 2px solid #111111 !important; font-weight: 600; background-color: white; font-size: small;">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                   </div>
               </div>
-              <hr/>
+              <hr/> -->
               <div class="row">
                 <div class="col-md-8 col-sm-12">
                           <div class="row mx-auto">
@@ -172,7 +172,7 @@
     <div class="container">
       <div class="row mx-3">
         <div class="col-md-4">
-          <h3 class="title text-white text-start">Topics</h3>
+          <h3 class="title text-white text-start" style="padding-top: 0px; margin-top: 0px;">Topics</h3>
           <p><!-- • Foundations <br> -->
             • Understanding God’s Heart<br>
             • Root Causes of Rejection<br>
@@ -183,7 +183,7 @@
           </p>
         </div>
         <div class="col-md-8">
-          <ngb-carousel id="carousel" [interval]="2000">
+          <!-- <ngb-carousel id="carousel" [interval]="2000">
             <ng-template ngbSlide>
               <img src="assets/img/ewg/ewg_2.webp" alt="Second slide" style="margin-bottom: 1em;">
             </ng-template>
@@ -193,7 +193,30 @@
             <ng-template ngbSlide>
               <img src="assets/img/ewg/ewg_4.webp" alt="Fourth slide" style="margin-bottom: 1em;">
             </ng-template>
-          </ngb-carousel>
+          </ngb-carousel> -->
+
+          <div class="slides">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides text-center">
+                <li class="glide__slide">
+                    <img src="assets/img/ewg/ewg_2.webp" alt="Second slide" style="margin-bottom: 1em;">
+                </li>
+                <li class="glide__slide">
+                  <img src="assets/img/ewg/ewg_3.webp" alt="Third slide" style="margin-bottom: 1em;">
+                </li>
+                <li class="glide__slide">
+                  <img src="assets/img/ewg/ewg_4.webp" alt="Fourth slide" style="margin-bottom: 1em;">
+                </li>
+              </ul>
+            </div>
+            <!-- <div data-glide-el="controls">
+              <button data-glide-dir="<<">Start</button>
+              <button data-glide-dir=">>">End</button>
+            </div> -->
+          </div>
+
+
+
         </div>
       </div>
     </div>
@@ -245,44 +268,74 @@
                   </div>
     </div>
   </div>
-  <!-- Testimonies -->
-  <div class="subscribe-line">
-    <div class="container">
-       <div class="text-center">
-            <h2 class="title text-start">Testimonies</h2>
-        </div>
-            <div class="row text-center">
-                <div class="col-md-4 col-sm-12">
-                  <div class="card card-plain">
-                    <div class="card-image">
-                      <img class="img rounded" src="assets/img/ewg/testimonies.webp">
+
+<!-- Testimonials -->
+  <section class="section-cards mb-5">
+    <div class="content-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-10 col-12 mx-auto text-start">
+            <h3 class="title text-dark text-center mx-auto" style="font-weight: 700;">Testimonies</h3>
+          </div>
+          <div class="col-md-12 col-md-6">
+            <div class="presentation-cards d-flex flex-column-reverse">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides text-center">
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">Divya Sudhakar & Vineetha</h6>
+                          <div style="padding:56.25% 0 0 0;position:relative;">
+                              <iframe src="https://player.vimeo.com/video/869018708?h=3bc6887ab9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Divya Sudhakar &amp; Vineetha"></iframe>
+                          </div>
+                      </div>
                     </div>
-                  </div>
-                    <div class="card-body text-start">
-                      <h6 class="card-title text-dark">Truth has set me Free</h6>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                  <div class="card card-plain">
-                    <div class="card-image">
-                      <img class="img rounded" src="assets/img/ewg/testimonies.webp">
+                  </li>
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">Denver & Mariska</h6>
+                        <div style="padding:56.25% 0 0 0;position:relative;">
+                          <iframe src="https://player.vimeo.com/video/869018600?h=e5f4dc54fa&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Denver &amp; Mariska"></iframe>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card-body text-start">
-                    <h6 class="card-title text-dark">HEALED FROM SPONDYLITIS</h6>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                  <div class="card card-plain">
-                    <div class="card-image">
-                      <img class="img rounded" src="assets/img/ewg/testimonies.webp">
+                  </li>
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">Cathan & Mable</h6>
+                        <div style="padding:56.25% 0 0 0;position:relative;">
+                          <iframe src="https://player.vimeo.com/video/869018505?h=9858b5213b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Cathan &amp; Mable"></iframe>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="card-body text-start">
-                    <h6 class="card-title text-dark">Freed from Burdens</h6>
-                </div>
-                </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  style="border: 3px solid #000;"
+                  class="glide__arrow glide__arrow--left text-default"
+                  aria-label="Previous"
+                  data-glide-dir="<"
+                >
+                  <i class="fa fa-arrow-left"> </i>
+                </button>
+                <button
+                  style="border: 3px solid #000;"
+                  class="glide__arrow glide__arrow--right text-default"
+                  aria-label="Next"
+                  data-glide-dir=">"
+                >
+                  <i class="fa fa-arrow-right"> </i>
+                </button>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
 </div>
