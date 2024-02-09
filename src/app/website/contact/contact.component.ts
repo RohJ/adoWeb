@@ -8,7 +8,7 @@ import * as Rellax from 'rellax';
 //   apiKey: "AIzaSyB9_DkqPWPVCGQRKiZY_QrJMc-c9cVLxhs",
 //   version: "weekly",
 // });
-// const myLatLng = { lat: 13.01533, lng: 77.66521 };
+ const myLatLng = { lat: 13.01533, lng: 77.66521 };
 
 @Component({
   selector: 'app-contact',
@@ -16,6 +16,20 @@ import * as Rellax from 'rellax';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit, AfterViewInit {
+
+  mapOptions: google.maps.MapOptions = {
+    center: myLatLng,
+    zoom: 16,
+    streetViewControl: false,
+        fullscreenControl: false,
+        mapTypeControlOptions: {
+          mapTypeIds: []
+        },
+  }
+  marker = {
+    position: { lat: 13.01533, lng: 77.66521 },
+    title: "Adonai Church"
+  }
 
   constructor() { }
 

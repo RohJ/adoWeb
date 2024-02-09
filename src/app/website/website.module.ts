@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 import { WebsiteComponent } from './website.component';
 import { CellsComponent } from './church/cells/cells.component';
@@ -22,13 +23,16 @@ import { CalendarComponent } from './church/calendar/calendar.component';
 import { ContactComponent } from './contact/contact.component';
 import { GiveComponent } from './give/give.component';
 
+
+
 @NgModule({
     imports: [
         CommonModule,
         BrowserModule,
         FormsModule,
         RouterModule,
-        NgbModule
+        NgbModule,
+        GoogleMapsModule
     ],
     declarations: [ WebsiteComponent, CellsComponent, EwgComponent, Wfc1Component, Wfc2Component, KkidsComponent, TeensComponent, DozComponent, PrayerComponent, MarriageComponent, PremaritalComponent, ParentingComponent, ServeComponent, CalendarComponent, ContactComponent, GiveComponent ],
     exports:[ WebsiteComponent ],

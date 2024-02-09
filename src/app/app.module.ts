@@ -27,7 +27,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     RouterModule,
     AppRoutingModule,
     WebsiteModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
