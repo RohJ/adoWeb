@@ -30,7 +30,7 @@ export class CellsComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     var rellaxHeader = new Rellax('.rellax-header');
 
-    var glide1 = new Glide(".presentation-cards", {
+    new Glide(".presentation-cards", {
       type: "carousel",
       startAt: 0,
       focusAt: 0,
@@ -54,19 +54,6 @@ export class CellsComponent implements OnInit, AfterViewInit {
           perView: 1
         }
       },
-    }).mount();
-
-    new Glide(".slides", {
-      type: "slider",
-      startAt: 0,
-      focusAt: 0,
-      perTouch: 1,
-      perview: 1,
-      autoplay: 3000,
-      peek: {
-        before: 50,
-        after: 70,
-      }
     }).mount();
 
     var body = document.getElementsByTagName('body')[0];
