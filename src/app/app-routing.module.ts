@@ -14,6 +14,10 @@ import { PrayerComponent } from './website/church/prayer/prayer.component';
 import { MarriageComponent } from './website/family/marriage/marriage.component';
 import { PremaritalComponent } from './website/family/premarital/premarital.component';
 import { ParentingComponent } from './website/family/parenting/parenting.component';
+import { ServeComponent } from './website/serve/serve.component';
+import { CalendarComponent } from './website/church/calendar/calendar.component';
+import { ContactComponent } from './website/contact/contact.component';
+import { GiveComponent } from './website/give/give.component';
 
 const routes: Routes = [
   { path: '',         component: WebsiteComponent },
@@ -27,7 +31,11 @@ const routes: Routes = [
   { path: 'prayer',         component: PrayerComponent },
   { path: 'marriage',         component: MarriageComponent },
   { path: 'premarital',         component: PremaritalComponent },
-  { path: 'parenting',         component: ParentingComponent }
+  { path: 'parenting',         component: ParentingComponent },
+  { path: 'serve',        component:ServeComponent},
+  { path: 'calendar',       component:CalendarComponent},
+  { path: 'contact',        component:ContactComponent},
+  { path: 'give',       component:GiveComponent},
 ];
 
 @NgModule({

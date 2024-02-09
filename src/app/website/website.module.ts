@@ -17,6 +17,10 @@ import { PrayerComponent } from './church/prayer/prayer.component';
 import { MarriageComponent } from './family/marriage/marriage.component';
 import { PremaritalComponent } from './family/premarital/premarital.component';
 import { ParentingComponent } from './family/parenting/parenting.component';
+import { ServeComponent } from './serve/serve.component';
+import { CalendarComponent } from './church/calendar/calendar.component';
+import { ContactComponent } from './contact/contact.component';
+import { GiveComponent } from './give/give.component';
 
 @NgModule({
     imports: [
@@ -26,7 +30,7 @@ import { ParentingComponent } from './family/parenting/parenting.component';
         RouterModule,
         NgbModule
     ],
-    declarations: [ WebsiteComponent, CellsComponent, EwgComponent, Wfc1Component, Wfc2Component, KkidsComponent, TeensComponent, DozComponent, PrayerComponent, MarriageComponent, PremaritalComponent, ParentingComponent ],
+    declarations: [ WebsiteComponent, CellsComponent, EwgComponent, Wfc1Component, Wfc2Component, KkidsComponent, TeensComponent, DozComponent, PrayerComponent, MarriageComponent, PremaritalComponent, ParentingComponent, ServeComponent, CalendarComponent, ContactComponent, GiveComponent ],
     exports:[ WebsiteComponent ],
     providers: []
 })
