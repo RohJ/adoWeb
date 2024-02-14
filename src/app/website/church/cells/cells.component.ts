@@ -30,31 +30,31 @@ export class CellsComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     var rellaxHeader = new Rellax('.rellax-header');
 
-    new Glide(".presentation-cards", {
-      type: "carousel",
-      startAt: 0,
-      focusAt: 0,
-      perTouch: 1,
-      perview: 5,
-      autoplay: 3000,
-      breakpoints: {
-        2560: {
-          perView: 4
-        },
-        1440: {
-          perView: 4
-        },
-        1024: {
-          perView: 3
-        },
-        768: {
-          perView: 2
-        },
-        600: {
-          perView: 1
-        }
-      },
-    }).mount();
+    // new Glide(".cells-cards", {
+    //   type: "carousel",
+    //   startAt: 0,
+    //   focusAt: 0,
+    //   perTouch: 1,
+    //   perview: 5,
+    //   autoplay: 3000,
+    //   breakpoints: {
+    //     2560: {
+    //       perView: 4
+    //     },
+    //     1440: {
+    //       perView: 4
+    //     },
+    //     1024: {
+    //       perView: 3
+    //     },
+    //     768: {
+    //       perView: 2
+    //     },
+    //     600: {
+    //       perView: 1
+    //     }
+    //   },
+    // }).mount();
 
     var body = document.getElementsByTagName('body')[0];
     body.classList.add('profile-page');

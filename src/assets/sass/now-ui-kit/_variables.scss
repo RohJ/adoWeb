@@ -151,7 +151,8 @@ $font-size-h1:                 3.5em        !default; // ~ 49px
 $font-size-h2:                 2.5rem        !default;
 $font-size-h3:                 1.825em      !default; // ~ 28px
 $font-size-h4:                 1.5em        !default; // ~ 24px
-$font-size-h5:                 1.3em        !default; // ~ 22px
+// $font-size-h5:                 1.3em        !default; // ~ 22px
+$font-size-h5:                 1.2em        !default;
 $font-size-h6:                 .9em         !default; // ~ 12px
 
 $font-paragraph:               1.2em          !default;
@@ -164,7 +165,8 @@ $font-size-large-navbar:       20px         !default;
 $font-size-blockquote:         1.1em        !default; // ~ 15px
 
 $font-weight-light:             300         !default;
-$font-weight-normal:            400         !default;
+// $font-weight-normal:            400         !default;
+$font-weight-normal:            500         !default;
 $font-weight-semi:              600         !default;
 $font-weight-bold:              700         !default;
 

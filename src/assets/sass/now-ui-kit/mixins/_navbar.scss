@@ -162,7 +162,8 @@
             height: 3px;
             border-radius: 1px;
           //  background: $white-bg;
-            background: darkgrey;
+            // background: darkgrey;
+            background: rgb(255, 255, 255);
 
             & + .navbar-toggler-bar{
                 margin-top: 7px;

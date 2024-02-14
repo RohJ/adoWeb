@@ -36,3 +36,27 @@
   right: -2em;
 }
 
+a {
+  text-decoration: none !important;
+  outline: 0!important;
+
+  &:hover {
+    text-decoration: none !important;
+  }
+
+  &:visited {
+    text-decoration: none !important;
+  }
+
+  &:active {
+    text-decoration: none !important;
+  }
+
+  .phone {
+    text-decoration: none !important;
+  }
+}
+
+.phone {
+  text-decoration: none !important;
+}

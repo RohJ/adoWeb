@@ -26,7 +26,7 @@ export class Wfc2Component implements OnInit, AfterViewInit {
   ngOnInit() {
     var rellaxHeader = new Rellax('.rellax-header');
 
-    new Glide(".presentation-cards", {
+    new Glide(".wfc2-cards", {
       type: "carousel",
       startAt: 0,
       focusAt: 0,

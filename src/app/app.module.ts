@@ -6,8 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WebsiteModule } from './website/website.module';
 import { HttpClientModule } from '@angular/common/http';
 
-import { WebsiteComponent } from './website/website.component';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';

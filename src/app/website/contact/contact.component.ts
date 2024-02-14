@@ -8,7 +8,7 @@ import * as Rellax from 'rellax';
 //   apiKey: "AIzaSyB9_DkqPWPVCGQRKiZY_QrJMc-c9cVLxhs",
 //   version: "weekly",
 // });
- const myLatLng = { lat: 13.01533, lng: 77.66521 };
+ const myLatLng = { lat: 13.01540026722184, lng: 77.66523682209028 }; // 13.01540026722184, 77.66523682209028
 
 @Component({
   selector: 'app-contact',
@@ -27,7 +27,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
         },
   }
   marker = {
-    position: { lat: 13.01533, lng: 77.66521 },
+    position: { lat: 13.01540026722184, lng: 77.66523682209028 },
     title: "Adonai Church"
   }
 
