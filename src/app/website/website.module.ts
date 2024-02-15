@@ -22,6 +22,10 @@ import { ServeComponent } from './serve/serve.component';
 import { CalendarComponent } from './church/calendar/calendar.component';
 import { ContactComponent } from './contact/contact.component';
 import { GiveComponent } from './give/give.component';
+import { SermonsComponent, SafeHtmlPipe } from './sermons/sermons.component';
+
+import { authInterceptorProviders } from '../_helpers/auth.interceptor';
+
 
 
 
@@ -34,8 +38,27 @@ import { GiveComponent } from './give/give.component';
         NgbModule,
         GoogleMapsModule
     ],
-    declarations: [ WebsiteComponent, CellsComponent, EwgComponent, Wfc1Component, Wfc2Component, KkidsComponent, TeensComponent, DozComponent, PrayerComponent, MarriageComponent, PremaritalComponent, ParentingComponent, ServeComponent, CalendarComponent, ContactComponent, GiveComponent ],
+    declarations: [
+        WebsiteComponent,
+        CellsComponent,
+        EwgComponent,
+        Wfc1Component,
+        Wfc2Component,
+        KkidsComponent,
+        TeensComponent,
+        DozComponent,
+        PrayerComponent,
+        MarriageComponent,
+        PremaritalComponent,
+        ParentingComponent,
+        ServeComponent,
+        CalendarComponent,
+        ContactComponent,
+        GiveComponent,
+        SermonsComponent,
+        SafeHtmlPipe
+    ],
     exports:[ WebsiteComponent ],
-    providers: []
+    providers: [ authInterceptorProviders ]
 })
 export class WebsiteModule { }

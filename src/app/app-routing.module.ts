@@ -18,6 +18,7 @@ import { ServeComponent } from './website/serve/serve.component';
 import { CalendarComponent } from './website/church/calendar/calendar.component';
 import { ContactComponent } from './website/contact/contact.component';
 import { GiveComponent } from './website/give/give.component';
+import { SermonsComponent } from './website/sermons/sermons.component';
 
 const routes: Routes = [
   { path: '',         component: WebsiteComponent },
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'calendar',       component:CalendarComponent},
   { path: 'contact',        component:ContactComponent},
   { path: 'give',       component:GiveComponent},
+  { path: 'sermons',       component:SermonsComponent},
 ];
 
 @NgModule({
