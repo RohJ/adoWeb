@@ -1,41 +1,46 @@
 <div class="wrapper">
-  <div class="section section-light text-center" style="padding-top: 90px; padding-bottom: 0em; background-color: lightslategrey;">
+  <div class="page-header page-header-small">
+    <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/banners/sermons_banner.webp') ;">
+    </div>
+    <div class="content-center">
+        <h1 class="title">Sermons</h1>
+    </div>
   </div>
   <div class="container">
-    <div style="text-align:center">
-    <h1>
-      Sermons
-    </h1>
-   </div>
-
-   <!-- <div class="container"> -->
-    <form class="form-inline ng-untouched ng-pristine ng-valid justify-content-left" role="search" style="align-items: baseline;">
-      <div class="form-group has-info d-inline-block" style="width: 86%!important;">
-        <input class="form-control border-input" id="query" placeholder="Search for a sermon" type="text" style="margin-right:1em; width: -webkit-fill-available;"></div>
-      <button class="btn btn-info btn-just-icon" type="submit" (click)="title()"><i class="nc-icon nc-zoom-split"></i></button>
-    </form>
-
-      <div ngbDropdown class="d-inline-block my-3 dropdown">
-        <a class="btn btn-info text-white" id="speakers" ngbDropdownToggle>Select Preacher</a>
-        <div ngbDropdownMenu aria-labelledby="speakers" class="dropdown-primary">
-          <a class="dropdown-header">Choose a preacher to see their sermons</a>
-          <button class="dropdown-item" (click)="speakers('911209319342881047389949516354')">Victor D'Monte</button>
-          <button class="dropdown-item" (click)="speakers('350747832693794070871209724122')">Annie D'Monte</button>
-          <button class="dropdown-item" (click)="speakers('888969787212702250918349325006')">Philips Dayanidhi</button>
-          <button class="dropdown-item" (click)="speakers('649832929073643619064472114264')">Charles Benedict</button>
-          <button class="dropdown-item" (click)="speakers('837119178737716534629032621881')">John Tristram</button>
-          <button class="dropdown-item" (click)="speakers('384348974901791344781842040604')">Arun Thomas</button>
-          <button class="dropdown-item" (click)="speakers('871582131114449230017073125748')">Ivan Raskino</button>
-          <button class="dropdown-item" (click)="speakers('530098596968520503432586781658')">Stanley Mehta</button>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <form class="form-inline ng-untouched ng-pristine ng-valid justify-content-left mt-5" role="search" style="align-items: baseline;">
+          <div class="form-group has-info d-inline-block" style="width: 86%!important;">
+            <input class="form-control border-input" id="query" placeholder="Search for a sermon" type="text" style="margin-right:1em; width: -webkit-fill-available;"></div>
+          <button class="btn btn-icon btn-round" type="submit" (click)="title()"><i class="fa fa-search fa-lg"></i></button>
+        </form>
+      </div>
+      <div class="col-md-6 col-sm-12 mt-4 text-end">
+        <div ngbDropdown class="d-inline-block my-3 dropdown">
+          <a type="button"  id="speakers" ngbDropdownToggle class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 600; background-color: white; font-size: small;">Select Preacher<i class="fa fa-arrow-down fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></a>
+          <!-- <a class="btn btn-info text-white" id="speakers" ngbDropdownToggle>Select Preacher</a> -->
+          <div ngbDropdownMenu aria-labelledby="speakers" class="dropdown-primary">
+            <a class="dropdown-header">Choose a preacher to see their sermons</a>
+            <button class="dropdown-item" (click)="speakers('911209319342881047389949516354')">Victor D'Monte</button>
+            <button class="dropdown-item" (click)="speakers('350747832693794070871209724122')">Annie D'Monte</button>
+            <button class="dropdown-item" (click)="speakers('888969787212702250918349325006')">Philips Dayanidhi</button>
+            <button class="dropdown-item" (click)="speakers('649832929073643619064472114264')">Charles Benedict</button>
+            <button class="dropdown-item" (click)="speakers('837119178737716534629032621881')">John Tristram</button>
+            <button class="dropdown-item" (click)="speakers('384348974901791344781842040604')">Arun Thomas</button>
+            <button class="dropdown-item" (click)="speakers('871582131114449230017073125748')">Ivan Raskino</button>
+            <button class="dropdown-item" (click)="speakers('530098596968520503432586781658')">Stanley Mehta</button>
+          </div>
+        </div>
+        <div class="d-inline-block">
+          <button type="button"  id="speakers" (click)="sermons()" class="d-flex justify-content-start btn text-dark ms-3" style="border: 2px solid #111111 !important; font-weight: 600; background-color: white; font-size: small;">All Sermons</button>
+          <!-- <button class="btn btn-info" id="sermons" (click)="sermons()">All Sermons</button> -->
         </div>
       </div>
-      <div class="d-inline-block">
-        <button class="btn btn-info" id="sermons" (click)="sermons()">All Sermons</button>
-      </div>
+    </div>
     <!-- </div> -->
-    <div class="container d-inline-block text-info" style="margin-top: 1rem;">
+    <!-- <div class="container d-inline-block text-info" style="margin-top: 1rem;"> -->
       <h6>Page {{ createData.page }} of {{ page }}</h6>
-  </div>
+    <!-- </div> -->
 
 <!-- <span id = "preacher"></span> -->
 <div class="row">
@@ -63,10 +68,10 @@
                                 <div class="card-body text-start" >
                                   <div  *ngFor="let tag of item.value['tags'] | keyvalue">
                                     <div *ngIf="(tag.value['name'] !== '911209319342881047389949516354' && tag.value['name'] !== '888969787212702250918349325006' && tag.value['name'] !== '350747832693794070871209724122' && tag.value['name'] !== '649832929073643619064472114264' && tag.value['name'] !== '384348974901791344781842040604' && tag.value['name'] !== '871582131114449230017073125748' && tag.value['name'] !== '530098596968520503432586781658' && tag.value['name'] !== '837119178737716534629032621881')">
-                                      <p class="mb-0">{{ tag.value['name'] }}</p>
+                                      <p class="mb-0" style="font-size: small; font-weight: 400;">{{ tag.value['name'] }}</p>
                                   </div>
                                 </div>
-                                <p class="card-description space-top">{{ item.value['description'] }}</p>
+                                <p class="mt-3">{{ item.value['description'] }}</p>
                             </div>
                         <!-- </div> -->
                     <!-- </div>
@@ -81,9 +86,9 @@
   </div>
 </div>
 
-<div class="row d-flex justify-content-center">
+<div class="col-12 justify-content-center">
 
- <ngb-pagination (pageChange)="loadPage($event)" [collectionSize]="createData.total" [(page)]="createData.page" [pageSize]="createData.per_page" [maxSize]="3" [rotate]="true" [boundaryLinks]="true" aria-label="sermon pagination"></ngb-pagination>
+ <ngb-pagination class="text-center" (pageChange)="loadPage($event)" [collectionSize]="createData.total" [(page)]="createData.page" [pageSize]="createData.per_page" [maxSize]="3" [rotate]="true" [boundaryLinks]="true" aria-label="sermon pagination"></ngb-pagination>
   <!-- <span> {{ createData.total }} | {{ createData.page }} | {{ createData.per_page }} | [(page)]</span> -->
 <!--<ngb-pagination [collectionSize]="createData.total" [(page)]="createData.page" [boundaryLinks]="true">
     <ng-template ngbPaginationPages let-page let-pages="pages">
@@ -111,5 +116,5 @@
   </ngb-pagination> -->
 
   </div>
-</div>
+  </div>
 </div>

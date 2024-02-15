@@ -1,9 +1,23 @@
-ul {
-  .pagination{
+.justify-content-center {
+  display: flex !important;
   justify-content: center !important;
-  }
 }
 
-.pagination{
-  justify-content: center !important;
+.dropdown-primary {
+  background-color: white !important;
+  color: black;
+
+.dropdown-header:not([href]):not([tabindex]) {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: small;
+    text-decoration: none;
+}
+.dropdown-item{
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 0.9rem;
+}
+}
+
+.dropdown-toggle::after {
+  display:none !important;
 }

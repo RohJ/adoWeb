@@ -112,7 +112,7 @@
                     <!-- <p class="description text-primary">
                         View All Sermons
                     </p>  -->
-                    <button type="button" class="btn text-white" style="border: 2px solid #ffffff !important; background-color: transparent; font-size: medium; font-weight: 700;">View All Sermons<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
+                    <button type="button" class="btn text-white" style="border: 2px solid #ffffff !important; background-color: transparent; font-size: medium; font-weight: 700;" [routerLink]="['/sermons']">View All Sermons<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                 </div>
                 <div class="col-md-8 my-4">
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/6tNmUg7ydckbn4RPfZeBse?utm_source=generator&theme=0" width="100%" height="252" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -132,7 +132,7 @@
             <h3 class="title text-dark text-md-start mx-3 mx-md-4" style="margin-bottom: 2rem;">Upcoming Events</h3>
               <div class="text-dark mx-3 mx-md-4" *ngFor="let items of sortedArray; let i = index">
                 <div *ngIf="i < 3" class="row">
-                    <div class="col-6 col-sm-4">
+                    <div class="col-md-3 col-6">
                         <div class="card-plain card-form-horizontal">
                             <div class="card-content">
                                 <h5 class="text-dark" style="text-align: start; font-weight: 700;">{{items.sdate | date:'mediumDate'}}</h5>
@@ -140,56 +140,56 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-sm-4">
+                    <div class="col-6">
                         <div class="card-plain card-form-horizontal">
                             <div class="card-content text-dark">
                                 <h4 class="text-dark" style="text-align: start; margin: 0 0;">{{ items.summary }}</h4>
                             </div>
                         </div>
                     </div>
-                    <div *ngIf="items.summary =='Encounter with God'" class="col-6 col-sm-4">
+                    <div *ngIf="items.summary =='Encounter with God'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
                       <div class="card-plain card-form-horizontal">
                           <div class="card-content text-dark">
                             <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 600; background-color: white; font-size: medium;" [routerLink]="['/ewg']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                           </div>
                       </div>
                     </div>
-                    <div *ngIf="items.summary =='Global Pastors Conference - Guwahati, Assam'" class="col-6 col-sm-4">
+                    <div *ngIf="items.summary =='Global Pastors Conference - Guwahati, Assam'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
                       <div class="card-plain card-form-horizontal">
                           <div class="card-content text-dark">
                             <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: medium;">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                           </div>
                       </div>
                     </div>
-                    <div *ngIf="items.summary =='Wholeness and Freedom Conference - Part II Dehradun'" class="col-6 col-sm-4">
+                    <div *ngIf="items.summary =='Wholeness and Freedom Conference - Part II Dehradun'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
                       <div class="card-plain card-form-horizontal">
                           <div class="card-content text-dark">
                             <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: medium;">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                           </div>
                       </div>
                     </div>
-                    <div *ngIf="items.summary =='Wholeness & Freedom Pt - I'" class="col-6 col-sm-4">
+                    <div *ngIf="items.summary =='Wholeness & Freedom Pt - I'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
                       <div class="card-plain card-form-horizontal">
                           <div class="card-content text-dark">
                             <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: medium;">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                           </div>
                       </div>
                     </div>
-                    <div *ngIf="items.summary =='Wholeness & Freedom Pt - I (Eng/Hindi) Dehradun'" class="col-6 col-sm-4">
+                    <div *ngIf="items.summary =='Wholeness & Freedom Pt - I (Eng/Hindi) Dehradun'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
                       <div class="card-plain card-form-horizontal">
                           <div class="card-content text-dark">
                             <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: small;">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                           </div>
                       </div>
                     </div>
-                    <div *ngIf="items.summary =='Wholeness & Freedom Conference PT - I (Eng / Tamil)'" class="col-6 col-sm-4">
+                    <div *ngIf="items.summary =='Wholeness & Freedom Conference PT - I (Eng / Tamil)'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
                       <div class="card-plain card-form-horizontal">
                           <div class="card-content text-dark">
                             <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: medium;">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                           </div>
                       </div>
                     </div>
-                    <div *ngIf="items.summary =='Wholeness and Freedom Conference - Part II Bangalore'" class="col-6 col-sm-4">
+                    <div *ngIf="items.summary =='Wholeness and Freedom Conference - Part II Bangalore'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
                       <div class="card-plain card-form-horizontal">
                           <div class="card-content text-dark">
                             <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: medium;">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
