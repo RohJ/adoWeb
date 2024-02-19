@@ -19,6 +19,10 @@ import { CalendarComponent } from './website/church/calendar/calendar.component'
 import { ContactComponent } from './website/contact/contact.component';
 import { GiveComponent } from './website/give/give.component';
 import { SermonsComponent } from './website/sermons/sermons.component';
+import { StaffComponent } from './website/about/staff/staff.component';
+import { StoryComponent } from './website/about/story/story.component';
+import { BeliefsComponent } from './website/about/beliefs/beliefs.component';
+
 
 const routes: Routes = [
   { path: '',         component: WebsiteComponent },
@@ -38,6 +42,9 @@ const routes: Routes = [
   { path: 'contact',        component:ContactComponent},
   { path: 'give',       component:GiveComponent},
   { path: 'sermons',       component:SermonsComponent},
+  { path: 'staff',       component:StaffComponent},
+  { path: 'story',       component:StoryComponent},
+  { path: 'beliefs',       component:BeliefsComponent},
 ];
 
 @NgModule({
