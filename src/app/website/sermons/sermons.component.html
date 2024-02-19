@@ -7,7 +7,11 @@
     </div>
   </div>
   <div class="container">
-    <div class="row">
+    <div *ngIf="createData.paging.first == null;" class="row text-dark">
+      <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
+      <h4 class="text-dark">Loading...</h4>
+    </div>
+    <div *ngIf="createData.paging.first != null;" class="row">
       <div class="col-md-6 col-sm-12">
         <form class="form-inline ng-untouched ng-pristine ng-valid justify-content-left mt-5" role="search" style="align-items: baseline;">
           <div class="form-group has-info d-inline-block" style="width: 86%!important;">

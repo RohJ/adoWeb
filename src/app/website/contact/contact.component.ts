@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 // import { Loader } from "@googlemaps/js-api-loader";
 import * as Rellax from 'rellax';
+import {Router, ActivatedRoute} from '@angular/router';
 
 // let map: google.maps.Map;
 
@@ -31,9 +32,12 @@ export class ContactComponent implements OnInit, AfterViewInit {
     title: "Adonai Church"
   }
 
-  constructor() { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
+
+    this.router.navigate([this.router.url]);
+
     var rellaxHeader = new Rellax('.rellax-header');
 
     var body = document.getElementsByTagName('body')[0];

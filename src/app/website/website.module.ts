@@ -25,6 +25,9 @@ import { GiveComponent } from './give/give.component';
 import { SermonsComponent, SafeHtmlPipe } from './sermons/sermons.component';
 
 import { authInterceptorProviders } from '../_helpers/auth.interceptor';
+import { StaffComponent } from './about/staff/staff.component';
+import { BeliefsComponent } from './about/beliefs/beliefs.component';
+import { StoryComponent } from './about/story/story.component';
 
 
 
@@ -56,7 +59,10 @@ import { authInterceptorProviders } from '../_helpers/auth.interceptor';
         ContactComponent,
         GiveComponent,
         SermonsComponent,
-        SafeHtmlPipe
+        SafeHtmlPipe,
+        StaffComponent,
+        BeliefsComponent,
+        StoryComponent
     ],
     exports:[ WebsiteComponent ],
     providers: [ authInterceptorProviders ]
