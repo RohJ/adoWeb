@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import * as Rellax from 'rellax';
 
 @Component({
@@ -6,18 +6,18 @@ import * as Rellax from 'rellax';
   templateUrl: './kkids.component.html',
   styleUrls: ['./kkids.component.scss']
 })
-export class KkidsComponent implements OnInit, AfterViewInit {
+export class KkidsComponent implements OnInit, OnDestroy, AfterViewInit {
 
   constructor() { }
 
   ngOnInit() {
-    var rellaxHeader = new Rellax('.rellax-header');
 
     var body = document.getElementsByTagName('body')[0];
     body.classList.add('profile-page');
     var navbar = document.getElementsByTagName('nav')[0];
     navbar.classList.add('navbar-transparent');
   }
+
   ngAfterViewInit(){
     setTimeout(function(){
       if (window.innerWidth >= 991) {
@@ -27,6 +27,7 @@ export class KkidsComponent implements OnInit, AfterViewInit {
     },200);
 
   }
+
   ngOnDestroy() {
     var body = document.getElementsByTagName('body')[0];
     body.classList.remove('profile-page');

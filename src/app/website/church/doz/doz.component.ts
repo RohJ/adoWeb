@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import * as Rellax from 'rellax';
 
 @Component({
@@ -6,12 +6,11 @@ import * as Rellax from 'rellax';
   templateUrl: './doz.component.html',
   styleUrls: ['./doz.component.scss']
 })
-export class DozComponent implements OnInit, AfterViewInit {
+export class DozComponent implements OnInit, OnDestroy, AfterViewInit {
 
   constructor() { }
 
   ngOnInit() {
-    var rellaxHeader = new Rellax('.rellax-header');
 
     var body = document.getElementsByTagName('body')[0];
     body.classList.add('profile-page');

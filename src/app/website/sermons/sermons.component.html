@@ -1,17 +1,26 @@
 <div class="wrapper">
-  <div class="page-header page-header-small">
+  <div class="page-header clear-filter page-header-small">
+    <div class="rellax-header" data-rellax-speed="-8">
+        <div class="page-header-image page-header-image" style="background-image: url('assets/img/banners/sermons_banner.webp');">
+        </div>
+    </div>
+    <div class="content-center">
+      <h1 class="title">Sermons</h1>
+    </div>
+  </div>
+  <!-- <div class="page-header page-header-small">
     <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/banners/sermons_banner.webp') ;">
     </div>
     <div class="content-center">
         <h1 class="title">Sermons</h1>
     </div>
-  </div>
+  </div> -->
   <div class="container">
-    <div *ngIf="createData.paging.first == null;" class="row text-dark">
-      <i class="fa fa-cog fa-spin fa-3x fa-fw"></i>
-      <h4 class="text-dark">Loading...</h4>
+    <div *ngIf="createData.length == 0;" class="row text-dark mt-4 text-center" >
+
+      <h4 class="text-dark d-inline-block"><i class="fa fa-cog fa-spin fa-2x fa-fw"></i>Loading...</h4>
     </div>
-    <div *ngIf="createData.paging.first != null;" class="row">
+    <div *ngIf="createData.length != 0;" class="row mx-1 mx-md-3">
       <div class="col-md-6 col-sm-12">
         <form class="form-inline ng-untouched ng-pristine ng-valid justify-content-left mt-5" role="search" style="align-items: baseline;">
           <div class="form-group has-info d-inline-block" style="width: 86%!important;">
@@ -43,11 +52,11 @@
     </div>
     <!-- </div> -->
     <!-- <div class="container d-inline-block text-info" style="margin-top: 1rem;"> -->
-      <h6>Page {{ createData.page }} of {{ page }}</h6>
+      <h6 class="container mx-1 mx-md-3" *ngIf="createData.length != 0;">Page {{ createData.page }} of {{ page }}</h6>
     <!-- </div> -->
 
 <!-- <span id = "preacher"></span> -->
-<div class="row">
+<div class="row mx-1 mx-md-3">
   <div class="col-md-4 col-sm-12 space-top" *ngFor="let item of createData.data | keyvalue">
     <div id="prayer">
       <div class="card card-plain card-blog">
@@ -90,7 +99,7 @@
   </div>
 </div>
 
-<div class="col-12 justify-content-center">
+<div *ngIf="createData.length != 0;" class="col-12 justify-content-center">
 
  <ngb-pagination class="text-center" (pageChange)="loadPage($event)" [collectionSize]="createData.total" [(page)]="createData.page" [pageSize]="createData.per_page" [maxSize]="3" [rotate]="true" [boundaryLinks]="true" aria-label="sermon pagination"></ngb-pagination>
   <!-- <span> {{ createData.total }} | {{ createData.page }} | {{ createData.per_page }} | [(page)]</span> -->

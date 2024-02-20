@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import * as Rellax from 'rellax';
 
 @Component({
@@ -6,14 +6,14 @@ import * as Rellax from 'rellax';
   templateUrl: './calendar.component.html',
   styleUrls: ['./calendar.component.scss']
 })
-export class CalendarComponent implements OnInit, AfterViewInit {
+export class CalendarComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit() {
-    var rellaxHeader = new Rellax('.rellax-header');
 
     var body = document.getElementsByTagName('body')[0];
     body.classList.add('profile-page');
   }
+
   ngAfterViewInit(){
     setTimeout(function(){
       if (window.innerWidth >= 991) {
@@ -23,6 +23,7 @@ export class CalendarComponent implements OnInit, AfterViewInit {
     },200);
 
   }
+
   ngOnDestroy() {
     var body = document.getElementsByTagName('body')[0];
     body.classList.remove('profile-page');

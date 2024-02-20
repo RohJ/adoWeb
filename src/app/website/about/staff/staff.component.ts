@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import * as Rellax from 'rellax';
 
 @Component({
@@ -6,16 +6,17 @@ import * as Rellax from 'rellax';
   templateUrl: './staff.component.html',
   styleUrls: ['./staff.component.scss']
 })
-export class StaffComponent implements OnInit, AfterViewInit {
+export class StaffComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit() {
-    var rellaxHeader = new Rellax('.rellax-header');
+
 
     var body = document.getElementsByTagName('body')[0];
-    body.classList.add('profile-page');
+    body.classList.add('presentation-page');
     var navbar = document.getElementsByTagName('nav')[0];
     navbar.classList.add('navbar-transparent');
   }
+
   ngAfterViewInit(){
     setTimeout(function(){
       if (window.innerWidth >= 991) {
@@ -25,9 +26,10 @@ export class StaffComponent implements OnInit, AfterViewInit {
     },200);
 
   }
+
   ngOnDestroy() {
     var body = document.getElementsByTagName('body')[0];
-    body.classList.remove('profile-page');
+    body.classList.remove('presentation-page');
     var navbar = document.getElementsByTagName('nav')[0];
     navbar.classList.remove('navbar-transparent');
   }

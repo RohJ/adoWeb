@@ -1,0 +1,263 @@
+<div class="wrapper">
+  <div class="page-header page-header-small">
+      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/ewg/ewg_banner.webp') ;">
+      </div>
+  </div>
+
+  <section *ngIf="response[0].status == 'success'; else failure"  class="h-100 h-custom" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card border-top border-bottom border-3">
+            <div class="card-body p-5">
+
+              <p class="lead fw-bold mb-5 text-success" >Payment Successful!</p>
+
+              <div class="row">
+                <div class="col mb-3">
+                  <p class="larger text-muted mb-1" style="font-weight: bold;">Date</p>
+                  <p>{{ response[0].addedon }}</p>
+                </div>
+                <div class="col mb-3">
+                  <p class="larger text-muted mb-1" style="font-weight: bold;">Transaction No.</p>
+                  <p>{{ response[0].txnid }}</p>
+                </div>
+              </div>
+
+              <div class="mx-n5 px-5 py-4" style="background-color: #f2f2f2; border-radius: 12px;">
+                <div class="row">
+                  <div class="col-md-4 col-lg-4">
+                    <p class="mb-0 larger" style="font-weight: bold;">Towards</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'wfcjundehradun2024'" class="col-md-8 col-lg-8">
+                    <p>Conference from June 2 to 8, 2024</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'wfcaugbangalore2024'" class="col-md-8 col-lg-8">
+                    <p>Conference from August 11 to 17, 2024</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'wfcaprbangalore2024'" class="col-md-8 col-lg-8">
+                    <p>Conference from April 7 to 13, 2024</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'wfcmaybangalore2024'" class="col-md-8 col-lg-8">
+                    <p>Conference from May 12 to 18, 2024</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'wfsmardehradun2024'" class="col-md-8 col-lg-8">
+                    <p>Conference from March 11 to 14, 2024</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'wfsnovbangalore2024'" class="col-md-8 col-lg-8">
+                    <p>Conference from November 4 to 8, 2024</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'ewgjanbangalore2024'" class="col-md-8 col-lg-8">
+                    <p>EWG from Jan 13 to 14, 2024</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'ewgfebbangalore2024'" class="col-md-8 col-lg-8">
+                    <p>EWG from Feb 10 to 11, 2024</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'ewgmarbangalore2024'" class="col-md-8 col-lg-8">
+                    <p>EWG from Mar 9 to 10, 2024</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'ewgjulbangalore2024'" class="col-md-8 col-lg-8">
+                    <p>EWG from Jul 13 to 14, 2024</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'ewgsepbangalore2024'" class="col-md-8 col-lg-8">
+                    <p>EWG from Sep 14 to 15, 2024</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'ewgnovbangalore2024'" class="col-md-8 col-lg-8">
+                    <p>EWG from Nov 16 to 17, 2024</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'Tithe'" class="col-md-8 col-lg-8">
+                    <p>Tithe</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'Offering'" class="col-md-8 col-lg-8">
+                    <p>Offering</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'Ministry'" class="col-md-8 col-lg-8">
+                    <p>Ministry</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'Project Nehemiah'" class="col-md-8 col-lg-8">
+                    <p>Project Nehemiah</p>
+                  </div>
+                </div>
+        <!--    <div class="row space-top">
+                  <div class="col-md-4 col-lg-4">
+                    <p class="mb-0 larger" style="font-weight: bold;">Venue</p>
+                  </div>
+                  <div *ngIf="response[0].productinfo == 'jundehradun2023'; else bangaloreVenue"  class="col-md-8 col-lg-8">
+                    <p class="mb-0">New Theological College (NTC)<br>P.O. Kulhan Sahastradhara Road,<br>Dehradun 248001</p>
+                  </div>
+                  <ng-template #bangaloreVenue>
+                    <div class="col-md-8 col-lg-8">
+                      <p class="mb-0">Adonai Church<br>No. 1-8, 3rd Main, Hoysala Nagar,<br>Bangalore 560016</p>
+                    </div>
+                  </ng-template>
+                </div>    -->
+              </div>
+
+              <div class="row my-4">
+                <div class="col-md-4 offset-md-8 col-lg-3 offset-lg-9">
+                  <p class="lead fw-bold mb-0" style="color: #f37a27;">Paid र {{ response[0].amount }}</p>
+                </div>
+              </div>
+
+              <p class="lead fw-bold mb-4 pb-2 text-info" style="font-size: medium;">Download the General Information Letter</p>
+
+              <div *ngIf="response[0].productinfo == 'wfsmardehradun2024'" class="mx-n5 px-5 py-4" style="background-color: #f2f2f2;">
+                <div class="row">
+                  <div class="col-md-8 col-lg-8">
+                    <p>Click to download the general Information letter in <strong>English</strong>.</p>
+                  </div>
+                  <div class="col-md-4 col-lg-4" >
+                    <a href="assets/files/WFC_II_General_Information_Letter_Mar24.pdf"><button type="button" class="btn btn-danger btn-round" (click)="downloadFile1()">Download</button></a>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="response[0].productinfo == 'wfsnovbangalore2024'" class="mx-n5 px-5 py-4" style="background-color: #f2f2f2;">
+                <div class="row">
+                  <div class="col-md-8 col-lg-8">
+                    <p>Click to download the general Information letter in <strong>English</strong>.</p>
+                  </div>
+                  <div class="col-md-4 col-lg-4" >
+                    <a href="assets/files/WFC_II_General_Information_Letter_Nov24.pdf"><button type="button" class="btn btn-danger btn-round" (click)="downloadFile3()">Download</button></a>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="response[0].productinfo == 'wfcjundehradun2024'" class="mx-n5 px-5 py-4" style="background-color: #f2f2f2;">
+                <div class="row">
+                  <div class="col-md-8 col-lg-8">
+                    <p>Click to download the general Information letter.</p>
+                  </div>
+                  <div class="col-md-4 col-lg-4" >
+                    <a href="assets/files/WFC_I_General_Information_Letter_Jun24.pdf"><button type="button" class="btn btn-danger btn-round" (click)="downloadFile()">Download</button></a>
+                  </div>
+                </div>
+              </div>
+              <div *ngIf="response[0].productinfo == 'ewgjanbangalore2024' || response[0].productinfo == 'ewgfebbangalore2024' || response[0].productinfo == 'ewgmarbangalore2024' || response[0].productinfo == 'ewgjulbangalore2024' || response[0].productinfo == 'ewgsepbangalore2024' || response[0].productinfo == 'ewgnovbangalore2024'" class="mx-n5 px-5 py-4" style="background-color: #f2f2f2;">
+                <div class="row">
+                  <div class="col-md-8 col-lg-8">
+                    <p>Click to download the general Information letter.</p>
+                  </div>
+                  <div class="col-md-4 col-lg-4" >
+                    <a href="assets/files/EWG_General_Information_Letter_2024.pdf"><button type="button" class="btn btn-danger btn-round" (click)="downloadFile2()">Download</button></a>
+                  </div>
+                </div>
+              </div>
+
+              <p class="card-description text-left mt-4 pt-2 mb-0" style="padding-bottom: 0.4rem;">For queries regarding your registration contact us at</p>
+              <a href="tel:+918048470008" style="text-decoration: none !important;"><i class="fa fa-phone" style="margin-right: 0.4rem;"></i>+91 8048470008</a>
+              <p></p><a href="mailto:hdc@adonaichurch.in" style="text-decoration: none !important;"><i class="fa fa-envelope" style="margin-right: 0.4rem;"></i>admin@adonaichurch.in</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ng-template #failure>
+    <section class="h-100 h-custom" style="background-color: #eee;">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-lg-8 col-xl-6">
+            <div class="card border-top border-bottom border-3">
+              <div class="card-body p-5">
+
+                <p class="lead fw-bold mb-5 text-danger" >Payment Failed!</p>
+
+                <div class="row">
+                  <div class="col mb-3">
+                    <p class="larger text-muted mb-1" style="font-weight: bold;">Date</p>
+                    <p>{{ response[0].addedon }}</p>
+                  </div>
+                  <div class="col mb-3">
+                    <p class="larger text-muted mb-1" style="font-weight: bold;">Transaction No.</p>
+                    <p>{{ response[0].txnid }}</p>
+                  </div>
+                </div>
+
+                <div class="mx-n5 px-5 py-4" style="background-color: #f2f2f2;  border-radius: 12px;">
+                  <div class="row">
+                    <div class="col-md-4 col-lg-4">
+                      <p class="mb-0 larger" style="font-weight: bold;">Towards</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'wfcjundehradun2024'" class="col-md-8 col-lg-8">
+                      <p>Conference from June 2 to 8, 2024</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'wfcaugbangalore2024'" class="col-md-8 col-lg-8">
+                      <p>Conference from August 11 to 17, 2024</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'wfcaprbangalore2024'" class="col-md-8 col-lg-8">
+                      <p>Conference from April 7 to 13, 2024</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'wfcmaybangalore2024'" class="col-md-8 col-lg-8">
+                      <p>Conference from May 12 to 18, 2024</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'wfsmardehradun2024'" class="col-md-8 col-lg-8">
+                      <p>Conference from March 11 to 14, 2024</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'wfsnovbangalore2024'" class="col-md-8 col-lg-8">
+                      <p>Conference from November 4 to 8, 2024</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'ewgjanbangalore2024'" class="col-md-8 col-lg-8">
+                      <p>EWG from Jan 13 to 14, 2024</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'ewgfebbangalore2024'" class="col-md-8 col-lg-8">
+                      <p>EWG from Feb 10 to 11, 2024</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'ewgmarbangalore2024'" class="col-md-8 col-lg-8">
+                      <p>EWG from Mar 9 to 10, 2024</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'ewgjulbangalore2024'" class="col-md-8 col-lg-8">
+                      <p>EWG from Jul 13 to 14, 2024</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'ewgsepbangalore2024'" class="col-md-8 col-lg-8">
+                      <p>EWG from Sep 14 to 15, 2024</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'ewgnovbangalore2024'" class="col-md-8 col-lg-8">
+                      <p>EWG from Nov 16 to 17, 2024</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'Tithe'" class="col-md-8 col-lg-8">
+                      <p>Tithe</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'Offering'" class="col-md-8 col-lg-8">
+                      <p>Offering</p>
+                    </div>
+                    <div *ngIf="response[0].productinfo == 'Ministry'" class="col-md-8 col-lg-8">
+                      <p>Ministry</p>
+                    </div>
+                  </div>
+                  <div class="row space-top">
+                    <div class="col-md-4 col-lg-4">
+                      <p class="mb-0 larger" style="font-weight: bold;">Reason</p>
+                    </div>
+                    <div class="col-md-8 col-lg-8">
+                      <p class="mb-0">{{ response[0].unmappedstatus }}</p>
+                    </div>
+                  </div>
+                  <div class="row space-top">
+                    <div class="col-md-4 col-lg-4">
+                      <p class="mb-0 larger" style="font-weight: bold;">Details</p>
+                    </div>
+                    <div class="col-md-8 col-lg-8">
+                      <p class="mb-0">{{ response[0].error_Message }}</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row my-4">
+                  <div class="col-md-5 offset-md-7 col-lg-5 offset-lg-7">
+                    <p class="lead fw-bold mb-0 text-danger">Pending र {{ response[0].amount }}</p>
+                  </div>
+                </div>
+
+                <p class="card-description text-left mt-4 pt-2 mb-0" style="padding-bottom: 0.4rem;">For queries regarding your registration contact us</p>
+                <a href="tel:+918048470008" style="text-decoration: none !important;"><i class="fa fa-phone" style="margin-right: 0.4rem;"></i>+91 8048470008</a>
+                <p></p><a href="mailto:hdc@adonaichurch.in" style="text-decoration: none !important;"><i class="fa fa-envelope" style="margin-right: 0.4rem;"></i>admin@adonaichurch.in</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </ng-template>
+</div>

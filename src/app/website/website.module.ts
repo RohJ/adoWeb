@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { GoogleMapsModule } from '@angular/google-maps';
@@ -28,6 +28,10 @@ import { authInterceptorProviders } from '../_helpers/auth.interceptor';
 import { StaffComponent } from './about/staff/staff.component';
 import { BeliefsComponent } from './about/beliefs/beliefs.component';
 import { StoryComponent } from './about/story/story.component';
+import { EwgregisterComponent } from './forms/ewgregister/ewgregister.component';
+import { Wfc1registerComponent } from './forms/wfc1register/wfc1register.component';
+import { Wfc2registerComponent } from './forms/wfc2register/wfc2register.component';
+import { ResponseComponent } from './response/response.component';
 
 
 
@@ -39,7 +43,9 @@ import { StoryComponent } from './about/story/story.component';
         FormsModule,
         RouterModule,
         NgbModule,
-        GoogleMapsModule
+        GoogleMapsModule,
+        FormsModule,
+        ReactiveFormsModule,
     ],
     declarations: [
         WebsiteComponent,
@@ -62,7 +68,11 @@ import { StoryComponent } from './about/story/story.component';
         SafeHtmlPipe,
         StaffComponent,
         BeliefsComponent,
-        StoryComponent
+        StoryComponent,
+        EwgregisterComponent,
+        Wfc1registerComponent,
+        Wfc2registerComponent,
+        ResponseComponent
     ],
     exports:[ WebsiteComponent ],
     providers: [ authInterceptorProviders ]

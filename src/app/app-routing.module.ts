@@ -22,6 +22,10 @@ import { SermonsComponent } from './website/sermons/sermons.component';
 import { StaffComponent } from './website/about/staff/staff.component';
 import { StoryComponent } from './website/about/story/story.component';
 import { BeliefsComponent } from './website/about/beliefs/beliefs.component';
+import { EwgregisterComponent } from './website/forms/ewgregister/ewgregister.component';
+import { Wfc1registerComponent } from './website/forms/wfc1register/wfc1register.component';
+import { Wfc2registerComponent } from './website/forms/wfc2register/wfc2register.component';
+import { ResponseComponent } from './website/response/response.component';
 
 
 const routes: Routes = [
@@ -45,6 +49,10 @@ const routes: Routes = [
   { path: 'staff',       component:StaffComponent},
   { path: 'story',       component:StoryComponent},
   { path: 'beliefs',       component:BeliefsComponent},
+  { path: 'ewgregister',       component:EwgregisterComponent},
+  { path: 'wfc1register',       component:Wfc1registerComponent},
+  { path: 'wfc2register',       component:Wfc2registerComponent},
+  { path: 'response',       component:ResponseComponent},
 ];
 
 @NgModule({
@@ -52,7 +60,7 @@ const routes: Routes = [
     CommonModule,
     BrowserModule,
     RouterModule.forRoot(routes,{
-      useHash: false
+      useHash: false,
     })
 ],
   exports: [],

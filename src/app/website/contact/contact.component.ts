@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 // import { Loader } from "@googlemaps/js-api-loader";
 import * as Rellax from 'rellax';
 import {Router, ActivatedRoute} from '@angular/router';
@@ -16,7 +16,7 @@ import {Router, ActivatedRoute} from '@angular/router';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit, AfterViewInit {
+export class ContactComponent implements OnInit, OnDestroy, AfterViewInit {
 
   mapOptions: google.maps.MapOptions = {
     center: myLatLng,
@@ -37,8 +37,6 @@ export class ContactComponent implements OnInit, AfterViewInit {
   ngOnInit() {
 
     this.router.navigate([this.router.url]);
-
-    var rellaxHeader = new Rellax('.rellax-header');
 
     var body = document.getElementsByTagName('body')[0];
     body.classList.add('profile-page');

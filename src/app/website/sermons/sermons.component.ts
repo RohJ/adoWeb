@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, Pipe, PipeTransform } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, Pipe, PipeTransform } from '@angular/core';
 import { AuthService } from '../../_services/auth.service';
 import { TokenStorageService } from '../../_services/token-storage.service';
 import { UserService } from '../../_services/user.service';
@@ -22,7 +22,7 @@ const FILTER_PAG_REGEX = /[^0-9]/g;
   styleUrls: ['./sermons.component.scss']
 })
 
-export class SermonsComponent implements OnInit, AfterViewInit {
+export class SermonsComponent implements OnInit, OnDestroy, AfterViewInit {
 
   model = {
     left: true,
@@ -48,10 +48,11 @@ p: number = 1;
   constructor(private authService: AuthService, private tokenStorage: TokenStorageService, private userAccess: UserService, private _sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    var rellaxHeader = new Rellax('.rellax-header');
+
+    console.log(this.createData);
 
     var body = document.getElementsByTagName('body')[0];
-    body.classList.add('profile-page');
+    body.classList.add('presentation-page');
     var navbar = document.getElementsByTagName('nav')[0];
     navbar.classList.add('navbar-transparent');
 
@@ -168,7 +169,7 @@ p: number = 1;
   }
   ngOnDestroy() {
     var body = document.getElementsByTagName('body')[0];
-    body.classList.remove('profile-page');
+    body.classList.remove('presentation-page');
     var navbar = document.getElementsByTagName('nav')[0];
     navbar.classList.remove('navbar-transparent');
   }

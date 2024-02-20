@@ -24,7 +24,7 @@
               "src/polyfills.ts"
             ],
             "tsConfig": "src/tsconfig.app.json",
-            "allowedCommonJsDependencies": ["nouislider", "rellax", "rxjs", "@tweenjs/tween.js"],
+            "allowedCommonJsDependencies": ["nouislider", "rellax", "rxjs", "@tweenjs/tween.js","js-sha512"],
             "assets": [
               "src/favicon.ico",
               "src/assets"

@@ -2,7 +2,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WebsiteModule } from './website/website.module';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -20,8 +20,8 @@ import { FooterComponent } from './shared/footer/footer.component';
   imports: [
     BrowserAnimationsModule,
     NgbModule,
-    FormsModule,
-    ReactiveFormsModule,
+    // FormsModule,
+    // ReactiveFormsModule,
     RouterModule,
     AppRoutingModule,
     WebsiteModule,
