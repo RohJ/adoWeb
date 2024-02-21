@@ -1,7 +1,15 @@
 <div class="wrapper">
   <div class="page-header page-header-small">
-      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/ewg/ewg_banner.webp') ;">
+      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/banners/common_banner.webp') ;">
       </div>
+      <div *ngIf="response[0].status == 'success'; else fail" class="content-center">
+        <h1 class="title">Transaction Successful!</h1>
+    </div>
+    <ng-template #fail>
+      <div class="content-center">
+        <h1 class="title">Transaction Failed!</h1>
+      </div>
+    </ng-template>
   </div>
 
   <section *ngIf="response[0].status == 'success'; else failure"  class="h-100 h-custom" style="background-color: #eee;">
@@ -161,7 +169,7 @@
             <div class="card border-top border-bottom border-3">
               <div class="card-body p-5">
 
-                <p class="lead fw-bold mb-5 text-danger" >Payment Failed!</p>
+                <h4 class="lead fw-bold mb-5 text-danger">Payment Failed!</h4>
 
                 <div class="row">
                   <div class="col mb-3">
@@ -245,13 +253,13 @@
 
                 <div class="row my-4">
                   <div class="col-md-5 offset-md-7 col-lg-5 offset-lg-7">
-                    <p class="lead fw-bold mb-0 text-danger">Pending र {{ response[0].amount }}</p>
+                    <p class="lead fw-bold mb-0 text-danger">Amount र {{ response[0].amount }}</p>
                   </div>
                 </div>
 
-                <p class="card-description text-left mt-4 pt-2 mb-0" style="padding-bottom: 0.4rem;">For queries regarding your registration contact us</p>
-                <a href="tel:+918048470008" style="text-decoration: none !important;"><i class="fa fa-phone" style="margin-right: 0.4rem;"></i>+91 8048470008</a>
-                <p></p><a href="mailto:hdc@adonaichurch.in" style="text-decoration: none !important;"><i class="fa fa-envelope" style="margin-right: 0.4rem;"></i>admin@adonaichurch.in</a>
+                <p class="card-description text-left mt-4 pt-2 mb-0" style="padding-bottom: 0.4rem;">For any queries please contact us at</p>
+                <a href="tel:+918048470008" style="text-decoration: none !important;"><i class="fa fa-phone" style="margin-right: 0.4rem;"></i>+91 8048470008<br></a>
+                <a href="mailto:hdc@adonaichurch.in" style="text-decoration: none !important;"><i class="fa fa-envelope" style="margin-right: 0.4rem;"></i>admin@adonaichurch.in</a>
 
               </div>
             </div>
