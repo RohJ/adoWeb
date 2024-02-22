@@ -26,6 +26,7 @@ import { EwgregisterComponent } from './website/forms/ewgregister/ewgregister.co
 import { Wfc1registerComponent } from './website/forms/wfc1register/wfc1register.component';
 import { Wfc2registerComponent } from './website/forms/wfc2register/wfc2register.component';
 import { ResponseComponent } from './website/response/response.component';
+import { CampusComponent } from './website/campus/campus.component';
 
 
 const routes: Routes = [
@@ -53,6 +54,7 @@ const routes: Routes = [
   { path: 'wfc1register',       component:Wfc1registerComponent},
   { path: 'wfc2register',       component:Wfc2registerComponent},
   { path: 'response',       component:ResponseComponent},
+  { path: 'campus',       component:CampusComponent},
 ];
 
 @NgModule({

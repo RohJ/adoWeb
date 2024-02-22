@@ -32,6 +32,7 @@ import { EwgregisterComponent } from './forms/ewgregister/ewgregister.component'
 import { Wfc1registerComponent } from './forms/wfc1register/wfc1register.component';
 import { Wfc2registerComponent } from './forms/wfc2register/wfc2register.component';
 import { ResponseComponent } from './response/response.component';
+import { CampusComponent } from './campus/campus.component';
 
 
 
@@ -72,7 +73,8 @@ import { ResponseComponent } from './response/response.component';
         EwgregisterComponent,
         Wfc1registerComponent,
         Wfc2registerComponent,
-        ResponseComponent
+        ResponseComponent,
+        CampusComponent
     ],
     exports:[ WebsiteComponent ],
     providers: [ authInterceptorProviders ]
