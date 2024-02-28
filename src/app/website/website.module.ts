@@ -74,7 +74,7 @@ import { CampusComponent } from './campus/campus.component';
         Wfc1registerComponent,
         Wfc2registerComponent,
         ResponseComponent,
-        CampusComponent
+        CampusComponent,
     ],
     exports:[ WebsiteComponent ],
     providers: [ authInterceptorProviders ]

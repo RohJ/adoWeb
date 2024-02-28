@@ -1,4 +1,4 @@
-<footer class="footer footer-big" style="background-image: url('assets/img/landing/bg1.webp');">
+<footer class="footer footer-big" style="background-image: url('assets/img/landing/bg1.webp'); background-size: cover;">
   <div class="container">
       <div class="content">
           <div class="row mx-3">
@@ -19,7 +19,7 @@
                         <ul class="links-vertical">
                           <li style="margin-top: 0.5rem;">
                             <i class="fa fa-map-marker" style="padding-bottom: 0;"></i>
-                              <a href="#" class="text-primary" style="text-transform: none; text-decoration: underline;">
+                              <a target="_blank" rel="noreferrer noopener" href="https://maps.app.goo.gl/z99BsnMGjazboFDY6" class="text-primary" style="text-transform: none; text-decoration: underline;">
                                   View on Maps
                               </a>
                           </li>
@@ -37,27 +37,27 @@
                   <h6>Links</h6>
                   <ul class="links-vertical">
                       <li>
-                          <a href="#" class="text-white">
-                              About
+                          <a [routerLink]="['/story']" class="text-white">
+                              Our Story
                           </a>
                       </li>
                       <li>
-                          <a href="#" class="text-white">
+                          <a [routerLink]="['/sermons']" class="text-white">
                               Sermons
                           </a>
                       </li>
                       <li>
-                          <a href="#" class="text-white">
-                              Ministries
+                          <a [routerLink]="['/campus']" class="text-white">
+                            Campus
                           </a>
                       </li>
                       <li>
-                          <a href="#" class="text-white">
+                          <a [routerLink]="['/give']" class="text-white">
                               Give
                           </a>
                       </li>
                       <li>
-                          <a href="#" class="text-white">
+                          <a href="#" (click)="open(disclaimer)" class="text-white">
                               Disclaimer
                           </a>
                       </li>
@@ -68,22 +68,22 @@
                   <h6>Follow Us</h6>
                   <ul class="links-vertical">
                     <li>
-                      <a href="#" style="text-transform: none;">
+                      <a target="_blank" rel="noreferrer noopener" href="https://www.instagram.com/adonaichurch/" style="text-transform: none;">
                           <i class="fa fa-instagram" style="padding-right: 1em;"></i>Instagram
                       </a>
                     </li>
                     <li>
-                          <a href="#" style="text-transform: none;">
+                          <a target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/adonaibangalore/" style="text-transform: none;">
                               <i class="fa fa-facebook-square" style="padding-right: 1em;"></i>FaceBook
                           </a>
                     </li>
                     <li>
-                          <a href="#" style="text-transform: none;">
+                          <a target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/@theadonaitube" style="text-transform: none;">
                               <i class="fa fa-youtube-play" style="padding-right: 1em;"></i>YouTube
                           </a>
                     </li>
                     <li>
-                        <a href="#" style="text-transform: none;">
+                        <a target="_blank" rel="noreferrer noopener" href="https://open.spotify.com/show/6tNmUg7ydckbn4RPfZeBse?si=507549143add4777" style="text-transform: none;">
                             <i class="fa fa-spotify" style="padding-right: 1em;"></i>Spotify
                         </a>
                     </li>
@@ -98,3 +98,28 @@
       </div>
   </div>
 </footer>
+<!-- Modal Terms and Conditions -->
+<ng-template #disclaimer let-modal>
+  <div class="modal-header" >
+
+      <button type="button" class="close float-end" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+      </button>
+      <h5 class="modal-title text-center" id="modal-disclaimer">CONSENT DECLARATION</h5>
+  </div>
+  <div class="mx-4 py-3">
+    <p style="font-size:smaller;">Thank you for choosing to visit the official website of Adonai Church to cognize and appreciate what we believe and envision as a healthy and vibrant community of Christian believers. Adonai Church is a Christian faith-based organization founded on the tenets of Biblical principles and Christian theology.<br>
+      <br>All the information published by Adonai Church on its official website and social media handles is done in good faith and is for general information purpose(s) only. Adonai Church will not be held liable for any recommendations, opinions or views expressed in personal capacity by an individual or group of individuals and is not responsible for any warranties whether implied or otherwise, unless particularly endorsed by way of a disclaimer or announcement on its official website or social media handles.<br>
+      <br><h6>TERMS OF USE</h6>
+      <br>The usage of this website is subject to and conditional, upon the acceptance of Terms of Use by the User. By visiting the official website or social media handles, the User acknowledges that any action thereafter to read the information, listen to audio or video content, express views, register for online and physical events is solely at the discretion of the User and is strictly at the User’s free will and volition to take upon the information provided by the platform.<br>
+      <br>Adonai Church will not be held liable for any losses or damages in connection with the use of our website. Adonai Church reserves the right to update written, visual and audio content displayed on its official website and social media handles as it deems fit to conform to the organization’s policies and applicable law. The User is encouraged to read the Terms of Use and check updates as and when necessary.<br>
+      <br><strong style="font-weight: bold;">Registration:</strong> Adonai Church hosts and conducts meetings and social gatherings (“Events”) based on Christian beliefs, Biblical principles and doctrines and invites the Users of its official website and social media handles to register and participate in these Events. The User is requested to read the instructions carefully provided to each of the Events before registering. The User may also reach out through the Email Address or Mobile Number provided for the relevant Point of Contact for each of these Events to raise any queries or concerns and the respective Point of Contact will resolve the query within a reasonable period of time.<br>
+      <br><strong style="font-weight: bold;">Netiquette:</strong> Adonai Church offers a means for facilitating discussions and expressing views on the comment sections of its social media handles. To ensure an enjoyable exchange of information we request that posts made on the social media platforms be for the primary purpose of Christian faith-based discussion and that moral standards are maintained in use of language and expression of views. When posting, the User agrees to respond to posts in a respectful manner and resolve any concerns over objectionable material by addressing it to the Adonai Team. The User agrees that any material which is posted that is false, defamatory, inaccurate, abusive, hateful, harassing, threatening, invasive of privacy, or otherwise violative of any law shall be subject to criminal action and claim of civil damages for any loss caused to Adonai Church monetarily or of reputation or otherwise.<br>
+      <br><strong style="font-weight: bold;">Copyright:</strong> The User agrees that content in any form on the official website or social media handles, whether written, electronic, audio, verbal or otherwise shall not be reproduced, transmitted, referenced or taken out of context in part or in entirety, without the written permission and authorization from Adonai Church. Any action by the User in contravention to the above will be in violation of Adonai Church’s proprietary rights and will be held liable to indemnify Adonai Church for any losses, damages or claims incurred thereof. Adonai Church reserves the right to remove any Users, or comments, who violate the Terms of Use and website guidelines at its sole discretion.<br>
+      <br><strong style="font-weight: bold;">Code of Conduct:</strong> Adonai Church believes in the Christian faith, theology and doctrines and exercises its rights guaranteed under the Constitution of India and applicable law to conduct its internal affairs and operations. Adonai Church believes in ethical conduct and conducts its Events in alignment with the applicable law and does not offer any gift, gratification, easy money or material benefit either in cash or kind, employment, free education in school or college run by any religious body or promise to marry or better any individual’s lifestyle, or portray divine displeasure or otherwise display practices, rituals and ceremonies or any integral part of a religion in a detrimental way vis-à-vis another religion or glorifying one religion against another religion and does not compel an individual to act against his/her will by the use of psychological pressure or physical force causing bodily injury or threat.<br>
+      <br>Users of the official website and social media handles are welcome to visit the platforms, subscribe to social media handles, participate in discussions and attend Events without infringing the rights of another and strictly adhering to Adonai Church’s Code of Conduct. Delegates participating in the Events shall register by duly paying the Registration cost indicated on the brochure. If the Delegate does not wish to proceed in attending an Event, they may request the Adonai Team to process a full refund of the Registration cost and the Adonai team shall facilitate the same.</p>
+      <!-- <p style="padding-left: 2rem; padding-bottom: 2rem; padding-right: 2rem; padding-top: 1rem; font-size:small;">I hereby confirm and declare that my attendance and presence at the Conference, organized by Adonai Ministries, is out of my own free will, volition and sound judgement and not under any undue influence, inducement, or by any act or representation of any kind or character.I hereby affirm that the purpose and intent of my participation in the conference is in pursuit of my personal desire to know more about the faith. It is understood by me that the teaching, preaching and sharing of information is based on the Bible and personal knowledge, and will not hold Adonai Ministries accountable, in any manner or level, any claims against the teachings imparted, which may or may not be in consonance to individual religious belief and faith.
+        <br>I hereby, undertake not to release or distribute any material or information received at the Conference available in the form of text, images, sound, audio, video, software, either in electronic or printable form without prior written approval by an authorized representative from Adonai Ministries and shall accept responsibility and be held liable for any breach thereof.<br>
+      </p> -->
+  </div>
+</ng-template>
