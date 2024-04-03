@@ -131,7 +131,7 @@
           </div>
             <h3 class="title text-dark text-md-start mx-3 mx-md-4" style="margin-bottom: 2rem;">Upcoming Events</h3>
               <div class="text-dark mx-3 mx-md-4" *ngFor="let items of sortedArray; let i = index">
-                <div *ngIf="i < 3" class="row">
+                <div *ngIf="i < 3" class="row" style="align-items: center;">
                     <div class="col-md-3 col-6">
                         <div class="card-plain card-form-horizontal">
                             <div class="card-content">
@@ -150,7 +150,7 @@
                     <div *ngIf="items.summary =='Encounter with God'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
                       <div class="card-plain card-form-horizontal">
                           <div class="card-content text-dark">
-                            <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 600; background-color: white; font-size: medium;" [routerLink]="['/ewg']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
+                            <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 600; background-color: white; font-size: medium;" [routerLink]="['/ewgregister']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                           </div>
                       </div>
                     </div>
@@ -164,35 +164,35 @@
                     <div *ngIf="items.summary =='Wholeness and Freedom Conference - Part II Dehradun'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
                       <div class="card-plain card-form-horizontal">
                           <div class="card-content text-dark">
-                            <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: medium;" [routerLink]="['/wfc2']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
+                            <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: medium;" [routerLink]="['/wfc2register']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                           </div>
                       </div>
                     </div>
                     <div *ngIf="items.summary =='Wholeness & Freedom Pt - I'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
                       <div class="card-plain card-form-horizontal">
                           <div class="card-content text-dark">
-                            <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: medium;" [routerLink]="['/wfc1']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
+                            <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: medium;" [routerLink]="['/wfc1register']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                           </div>
                       </div>
                     </div>
                     <div *ngIf="items.summary =='Wholeness & Freedom Pt - I (Eng/Hindi) Dehradun'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
                       <div class="card-plain card-form-horizontal">
                           <div class="card-content text-dark">
-                            <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: small;" [routerLink]="['/wfc1']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
+                            <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: small;" [routerLink]="['/wfc1register']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                           </div>
                       </div>
                     </div>
                     <div *ngIf="items.summary =='Wholeness & Freedom Conference PT - I (Eng / Tamil)'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
                       <div class="card-plain card-form-horizontal">
                           <div class="card-content text-dark">
-                            <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: medium;" [routerLink]="['/wfc1']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
+                            <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: medium;" [routerLink]="['/wfc1register']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                           </div>
                       </div>
                     </div>
                     <div *ngIf="items.summary =='Wholeness and Freedom Conference - Part II Bangalore'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
                       <div class="card-plain card-form-horizontal">
                           <div class="card-content text-dark">
-                            <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: medium;"  [routerLink]="['/wfc2']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
+                            <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: medium;"  [routerLink]="['/wfc2register']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                           </div>
                       </div>
                     </div>
@@ -222,7 +222,7 @@
                         <img class="d-block col-md-6 col-sm-12 rounded" src="assets/img/landing/EWG_carousel.webp" alt="First slide" style="margin-bottom: 1em;">
                       </div>
                       <div class="col-md-6 col-sm-12" style="align-self: center;">
-                        <p style="font-weight: 500;">The Encounter with God is a weekend programme that enables people to live life in abundance and experience freedom from rejection, curses and other areas they are struggling with. The teachings help establish a Godly foundation and answer various questions that people have about God.</p>
+                        <p style="font-weight: 500;">The Encounter with God is a weekend programme that enables people to live life in abundance and experience freedom from rejection, curses and other areas they are struggling with. The teachings help establish a Godly foundation and answer various questions that people have about God. Through these sessions, we have witnessed many people healed and restored to wholeness through the understanding that comes from experiencing The love of God. The programme caters to people across various denominations and geographic locations."</p>
                         <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: transparent; font-size: medium;" [routerLink]="['/ewg']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                       </div>
                     </div>
@@ -255,7 +255,7 @@
                         <img class="d-block col-md-6 col-sm-12" src="assets/img/landing/GPC_carousel.webp" alt="Fourth slide" style="margin-bottom: 1em;">
                       </div>
                       <div class="col-md-6 col-sm-12" style="align-self: center;">
-                        <p>Driven by his burden and passion for supporting pastors and leaders, he saw the need to organize a conference for pastors and full-time workers to be encouraged. Driven by his burden and passion for supporting pastors and leaders, he saw the need to organize a conference for pastors and full-time workers to be encouraged. Through the Global Pastoral Conference, Rev. Victor D'Monte endeavors to unite pastors and leaders from various backgrounds, cultures, and experiences, creating a space to learn, grow, and find encouragement as they serve the Body of Christ.</p>
+                        <p>Driven by his burden and passion for supporting pastors and leaders, he saw the need to organize a conference for pastors and full-time workers to be encouraged. Through the Global Pastoral Conference, Rev. Victor D'Monte endeavors to unite pastors and leaders from various backgrounds, cultures, and experiences, creating a space to learn, grow, and find encouragement as they serve the Body of Christ.</p>
                         <a type="button" class="d-inline-flex btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: transparent; font-size: medium;" target="_blank" rel="noreferrer noopener" href="https://www.globalpastorsconference.com/">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></a>
                       </div>
                     </div>
