@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import * as Rellax from 'rellax';
-import Glide from "@glidejs/glide";
 
 @Component({
   selector: 'app-youth',
