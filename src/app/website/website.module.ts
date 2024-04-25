@@ -33,6 +33,7 @@ import { Wfc1registerComponent } from './forms/wfc1register/wfc1register.compone
 import { Wfc2registerComponent } from './forms/wfc2register/wfc2register.component';
 import { ResponseComponent } from './response/response.component';
 import { CampusComponent } from './campus/campus.component';
+import { YouthComponent } from './church/youth/youth.component';
 
 
 
@@ -75,6 +76,7 @@ import { CampusComponent } from './campus/campus.component';
         Wfc2registerComponent,
         ResponseComponent,
         CampusComponent,
+        YouthComponent,
     ],
     exports:[ WebsiteComponent ],
     providers: [ authInterceptorProviders ]
