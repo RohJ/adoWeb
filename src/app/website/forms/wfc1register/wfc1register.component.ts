@@ -142,7 +142,7 @@ export class Wfc1registerComponent implements OnInit, OnDestroy, AfterViewInit {
   console.log(age);
 
   if (this.wfcForm.controls['paym'].value == 'Full Payment') {
-  if (this.wfcForm.controls['productinfo'].value == 'jundehradun2023' && this.wfcForm.controls['residential'].value == 'Residential') {
+  if (this.wfcForm.controls['productinfo'].value == 'wfcjundehradun2024' && this.wfcForm.controls['residential'].value == 'Residential') {
       console.log("Loop 1");
     if (age < 6) {
       console.log("Loop 2");
@@ -154,7 +154,7 @@ export class Wfc1registerComponent implements OnInit, OnDestroy, AfterViewInit {
       console.log("Loop 4");
       amt = amt + this.dehRes;
     }
-  } else if (this.wfcForm.controls['productinfo'].value == 'jundehradun2023' && this.wfcForm.controls['residential'].value == 'Non Residential') {
+  } else if (this.wfcForm.controls['productinfo'].value == 'wfcjundehradun2024' && this.wfcForm.controls['residential'].value == 'Non Residential') {
 
     if (age < 6) {
       console.log("Loop 5");
@@ -166,7 +166,7 @@ export class Wfc1registerComponent implements OnInit, OnDestroy, AfterViewInit {
       console.log("Loop 7");
       amt = amt + this.dehNonres;
     }
-  } else if (this.wfcForm.controls['productinfo'].value != 'jundehradun2023' && this.wfcForm.controls['residential'].value == 'Residential') {
+  } else if (this.wfcForm.controls['productinfo'].value != 'wfcjundehradun2024' && this.wfcForm.controls['residential'].value == 'Residential') {
 
     if (age < 6) {
       console.log("Loop 8");
@@ -178,7 +178,7 @@ export class Wfc1registerComponent implements OnInit, OnDestroy, AfterViewInit {
       console.log("Loop 10");
       amt = amt + this.res;
     }
-  } else if (this.wfcForm.controls['productinfo'].value != 'jundehradun2023' && this.wfcForm.controls['residential'].value == 'Non Residential') {
+  } else if (this.wfcForm.controls['productinfo'].value != 'wfcjundehradun2024' && this.wfcForm.controls['residential'].value == 'Non Residential') {
 
     if (age < 6) {
       amt = amt + 0;
