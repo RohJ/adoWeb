@@ -31,7 +31,7 @@ export class MarriageComponent implements OnInit, OnDestroy, AfterViewInit {
       focusAt: 0,
       perTouch: 1,
       perview: 5,
-      autoplay: 3000,
+      autoplay: 0,
       breakpoints: {
         2560: {
           perView: 4
