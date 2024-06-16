@@ -51,7 +51,7 @@ export class EwgregisterComponent implements OnInit, OnDestroy, AfterViewInit {
     res = 2100;
     nonres = 700;
     resChild = 1470;
-    nonresChild = 0;
+    nonresChild = 470;
 
     // Pre-registration
     preAmt = 300;
