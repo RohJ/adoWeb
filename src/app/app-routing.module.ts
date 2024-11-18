@@ -28,6 +28,7 @@ import { Wfc2registerComponent } from './website/forms/wfc2register/wfc2register
 import { ResponseComponent } from './website/response/response.component';
 import { CampusComponent } from './website/campus/campus.component';
 import { YouthComponent } from './website/church/youth/youth.component';
+import { PolicyComponent } from './website/policy/policy.component';
 
 
 const routes: Routes = [
@@ -57,6 +58,7 @@ const routes: Routes = [
   { path: 'response',       component:ResponseComponent},
   { path: 'campus',       component:CampusComponent},
   { path: 'youth',       component:YouthComponent},
+  { path: 'policy',       component:PolicyComponent},
 ];
 
 @NgModule({
