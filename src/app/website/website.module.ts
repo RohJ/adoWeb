@@ -35,6 +35,7 @@ import { ResponseComponent } from './response/response.component';
 import { CampusComponent } from './campus/campus.component';
 import { YouthComponent } from './church/youth/youth.component';
 import { PolicyComponent } from './policy/policy.component';
+import { DiscipleshipComponent } from './discipleship/discipleship.component';
 
 
 
@@ -79,6 +80,7 @@ import { PolicyComponent } from './policy/policy.component';
         CampusComponent,
         YouthComponent,
         PolicyComponent,
+        DiscipleshipComponent,
     ],
     exports:[ WebsiteComponent ],
     providers: [ authInterceptorProviders ]

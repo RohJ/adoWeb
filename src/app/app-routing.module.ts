@@ -29,6 +29,7 @@ import { ResponseComponent } from './website/response/response.component';
 import { CampusComponent } from './website/campus/campus.component';
 import { YouthComponent } from './website/church/youth/youth.component';
 import { PolicyComponent } from './website/policy/policy.component';
+import { DiscipleshipComponent } from './website/discipleship/discipleship.component';
 
 
 const routes: Routes = [
@@ -59,6 +60,7 @@ const routes: Routes = [
   { path: 'campus',       component:CampusComponent},
   { path: 'youth',       component:YouthComponent},
   { path: 'policy',       component:PolicyComponent},
+  { path: 'discipleship',       component:DiscipleshipComponent},
 ];
 
 @NgModule({
