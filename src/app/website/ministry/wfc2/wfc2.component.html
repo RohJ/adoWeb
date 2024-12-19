@@ -44,10 +44,48 @@
     </div>
   </div>
   <!-- Upcoming Dates -->
+
   <div class="subscribe-line mx-3" data-background-color="white">
     <div class="container">
           <h3 class="title text-dark text-md-start" style="margin-bottom: 2rem;">Upcoming Dates</h3>
-            <div class="text-dark text-center mx-auto">
+
+          <div class="text-dark mx-3 mx-md-4" *ngFor="let items of sortedArray; let i = index">
+            <div *ngIf="items.summary =='Wholeness and Freedom Conference - Part II'">
+              <div *ngIf="i < 15" class="row" style="align-items: center;">
+                  <div class="col-md-3 col-6">
+                      <div class="card-plain card-form-horizontal">
+                          <div class="card-content">
+                              <h5 class="text-dark" style="text-align: start; font-weight: 700;">{{items.sdate | date:'mediumDate'}}</h5>
+                              <h5 class="text-dark" style="text-align: start; margin-bottom: 0px;">{{ items.sdate | date:'shortTime' }}</h5>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="card-plain card-form-horizontal">
+                          <div class="card-content text-dark">
+                              <h4 class="text-dark" style="text-align: start; margin: 0 0;">{{ items.summary }}</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <div *ngIf="items.summary =='Wholeness and Freedom Conference - Part II'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
+                    <div class="card-plain card-form-horizontal">
+                        <div class="card-content text-dark">
+                          <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 600; background-color: white; font-size: medium;" [routerLink]="['/wfc2register']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <hr *ngIf="i < 15"/>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+  <!-- <div class="subscribe-line mx-3" data-background-color="white">
+    <div class="container">
+          <h3 class="title text-dark text-md-start" style="margin-bottom: 2rem;">Upcoming Dates</h3> -->
+            <!-- <div class="text-dark text-center mx-auto"> -->
               <!-- <div class="row ">
                   <div class="col-md-8 col-sm-12" style="align-self: center;">
                             <div class="row mx-auto">
@@ -67,7 +105,7 @@
                   </div>
               </div>
               <hr/> -->
-              <div class="row">
+              <!-- <div class="row">
                 <div class="col-md-8 col-sm-12" style="align-self: center;">
                           <div class="row mx-auto">
                             <div class="col-4 col-md-4" style="align-self: center;">
@@ -84,11 +122,11 @@
                 <div class="col-md-4 col-sm-12 text-end" style="align-self: center;">
                           <button type="button" class="btn text-dark" style="border: 2px solid #111111 !important; font-weight: 700; background-color: white; font-size: medium;" [routerLink]="['/wfc2register']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
                 </div>
-              </div>
-              <hr/>
+              </div> -->
+              <!-- <hr/>
           </div>
       </div>
-  </div>
+  </div> -->
   <!-- Carousel Section -->
   <div class="section" id="carousel" data-background-color="black">
     <div class="container">
@@ -165,7 +203,7 @@
                       <div class="col-sm-3">
                           <div>
                               <h4 class="title text-dark text-start">Time</h4>
-                              <h6>Mon - Fri: &nbsp;&nbsp;&nbsp;&nbsp;9 am - 5:30 pm<br>
+                              <h6>Mon - Fri: &nbsp;&nbsp;&nbsp;&nbsp;9:00 am - 8:00 pm<br>
                               </h6>
                           </div>
                       </div>
@@ -174,7 +212,7 @@
                               <h4 class="title text-dark text-start">Contact</h4>
                               <a type="button" class="btn" style="border: 2px solid #000000 !important; background-color: transparent; font-size: medium; color: #000000; font-weight: 700;" href="tel:+918048470000"><i class="fa fa-phone fa-lg" style="margin-right: 0.5rem; margin-top: 3px;"></i>+91 80484 70000</a>
                                 <h6 style="font-size: small;">Office timings:</h6>
-                                <p style="font-size: small;">9:00 am to 4:30 pm <br>(Mon to Fri)
+                                <p style="font-size: small;">9:00 am to 5:00 pm <br>(Tue to Sun)
                                   </p>
                           </div>
                       </div>
@@ -213,7 +251,7 @@
                       <div class="col-sm-3">
                           <div>
                               <h4 class="title text-dark text-start">Time</h4>
-                              <h6>Mon - Fri: &nbsp;&nbsp;&nbsp;&nbsp;9 am - 5:30 pm<br>
+                              <h6>Mon - Fri: &nbsp;&nbsp;&nbsp;&nbsp;9:00 am - 8:00 pm<br>
                               </h6>
                           </div>
                       </div>
@@ -223,7 +261,7 @@
                               <p class="text-start mb-0" style="font-size:small;">Coordinator:</p>
                               <h5 class="text-start" style="font-weight: 700;">Pankaj Bhagwane</h5>
                               <a type="button" class="btn phone" style="border: 2px solid #000000 !important; background-color: transparent; font-size: medium; color: #000000; font-weight: 700;" href="tel:+918197034745"><i class="fa fa-phone fa-lg" style="margin-right: 0.5rem; margin-top: 3px;"></i>+91 81970 34745</a>                                <h6 style="font-size: small;">Office timings:</h6>
-                                <p style="font-size: small;">9:00 am to 4:30 pm <br>(Mon to Fri)
+                                <p style="font-size: small;">9:00 am to 5:00 pm <br>(Tue to Sun)
                                   </p>
                           </div>
                       </div>

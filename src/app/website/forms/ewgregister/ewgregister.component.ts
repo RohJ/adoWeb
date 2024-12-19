@@ -103,8 +103,8 @@ export class EwgregisterComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public saveRegistration(): void {
 
-    console.log(this.wfcForm.value);
-    console.log("Value of submitted is "+this.submitted);
+    // console.log(this.wfcForm.value);
+    // console.log("Value of submitted is "+this.submitted);
     var amt = 0;
 
     for ( let i = 0; i < this.registrationForm.controls.length; i++) {
@@ -132,34 +132,34 @@ export class EwgregisterComponent implements OnInit, OnDestroy, AfterViewInit {
     };
     this.data.push(this.registration);
 
-    console.log(this.registration.age);
+    // console.log(this.registration.age);
   //  console.log(this.data);
   var age:number = Number (this.registration.age);
   console.log(age);
 
   if (this.wfcForm.controls['paym'].value == 'Full Payment') {
   if (this.wfcForm.controls['residential'].value == 'Residential') {
-      console.log("Loop 1");
+      // console.log("Loop 1");
     if (age < 6) {
-      console.log("Loop 2");
+      // console.log("Loop 2");
       amt = amt + 0;
     } else if (age < 12) {
-      console.log("Loop 3");
+      // console.log("Loop 3");
       amt = amt + this.resChild;
     } else if (age > 12) {
-      console.log("Loop 4");
+      // console.log("Loop 4");
       amt = amt + this.res;
     }
   } else if (this.wfcForm.controls['residential'].value == 'Non Residential') {
 
     if (age < 6) {
-      console.log("Loop 5");
+      // console.log("Loop 5");
       amt = amt + 0;
     } else if (age < 12) {
-      console.log("Loop 6");
+      // console.log("Loop 6");
       amt = amt + this.nonresChild;
     } else if (age > 12) {
-      console.log("Loop 7");
+      // console.log("Loop 7");
       amt = amt + this.nonres;
     }
   }
@@ -170,13 +170,13 @@ export class EwgregisterComponent implements OnInit, OnDestroy, AfterViewInit {
     amt = amt + 0;
   }
 }
-  console.log(amt);
+  // console.log(amt);
   }
 
-  console.log("For loop completed.");
+  // console.log("For loop completed.");
 
   this.amnt = amt;
-  console.log(this.amnt);
+  // console.log(this.amnt);
 
     this.registerService.create(this.data)
       .subscribe({
@@ -207,7 +207,7 @@ export class EwgregisterComponent implements OnInit, OnDestroy, AfterViewInit {
       this.hashed = ('Z9XQW5'+'|'+this.registration.txnid+'|'+this.amnt+'|'+this.wfcForm.controls['productinfo'].value+'|'+this.registrationForm.at(0).get('firstname').value+'|'+this.registrationForm.at(0).get('email').value+'|'+udf1+'|'+udf2+'|'+udf3+'|'+udf4+'|'+udf5+'|'+'|'+'|'+'|'+'|'+'|'+this.salt);
     //  console.log(this.hashed);
       var hf = sha512(this.hashed);
-      console.log(this.registration.amount);
+      // console.log(this.registration.amount);
 
       let paymentForm = document.createElement('form');
       paymentForm.action = 'https://secure.payu.in/_payment';

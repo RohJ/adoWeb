@@ -107,8 +107,8 @@ export class Wfc1registerComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public saveRegistration(): void {
 
-    console.log(this.wfcForm.value);
-    console.log("Value of submitted is "+this.submitted);
+    // console.log(this.wfcForm.value);
+    // console.log("Value of submitted is "+this.submitted);
     var amt = 0;
 
     for ( let i = 0; i < this.registrationForm.controls.length; i++) {
@@ -136,49 +136,49 @@ export class Wfc1registerComponent implements OnInit, OnDestroy, AfterViewInit {
     };
     this.data.push(this.registration);
 
-    console.log(this.registration.age);
+    // console.log(this.registration.age);
   //  console.log(this.data);
   var age:number = Number (this.registration.age);
   console.log(age);
 
   if (this.wfcForm.controls['paym'].value == 'Full Payment') {
-  if (this.wfcForm.controls['productinfo'].value == 'wfcjundehradun2024' && this.wfcForm.controls['residential'].value == 'Residential') {
-      console.log("Loop 1");
+  if (this.wfcForm.controls['productinfo'].value == 'wfcjundehradun2025' && this.wfcForm.controls['residential'].value == 'Residential') {
+      // console.log("Loop 1");
     if (age < 6) {
-      console.log("Loop 2");
+      // console.log("Loop 2");
       amt = amt + 0;
     } else if (age < 12) {
-      console.log("Loop 3");
+      // console.log("Loop 3");
       amt = amt + this.dehResChild;
     } else if (age > 12) {
-      console.log("Loop 4");
+      // console.log("Loop 4");
       amt = amt + this.dehRes;
     }
-  } else if (this.wfcForm.controls['productinfo'].value == 'wfcjundehradun2024' && this.wfcForm.controls['residential'].value == 'Non Residential') {
+  } else if (this.wfcForm.controls['productinfo'].value == 'wfcjundehradun2025' && this.wfcForm.controls['residential'].value == 'Non Residential') {
 
     if (age < 6) {
-      console.log("Loop 5");
+      // console.log("Loop 5");
       amt = amt + 0;
     } else if (age < 12) {
-      console.log("Loop 6");
+      // console.log("Loop 6");
       amt = amt + this.dehNonresChild;
     } else if (age > 12) {
-      console.log("Loop 7");
+      // console.log("Loop 7");
       amt = amt + this.dehNonres;
     }
-  } else if (this.wfcForm.controls['productinfo'].value != 'wfcjundehradun2024' && this.wfcForm.controls['residential'].value == 'Residential') {
+  } else if (this.wfcForm.controls['productinfo'].value != 'wfcjundehradun2025' && this.wfcForm.controls['residential'].value == 'Residential') {
 
     if (age < 6) {
-      console.log("Loop 8");
+      // console.log("Loop 8");
       amt = amt + 0;
     } else if (age < 12) {
-      console.log("Loop 9");
+      // console.log("Loop 9");
       amt = amt + this.resChild;
     } else if (age > 12) {
-      console.log("Loop 10");
+      // console.log("Loop 10");
       amt = amt + this.res;
     }
-  } else if (this.wfcForm.controls['productinfo'].value != 'wfcjundehradun2024' && this.wfcForm.controls['residential'].value == 'Non Residential') {
+  } else if (this.wfcForm.controls['productinfo'].value != 'wfcjundehradun2025' && this.wfcForm.controls['residential'].value == 'Non Residential') {
 
     if (age < 6) {
       amt = amt + 0;
@@ -195,13 +195,13 @@ export class Wfc1registerComponent implements OnInit, OnDestroy, AfterViewInit {
     amt = amt + 0;
   }
 }
-  console.log(amt);
+  // console.log(amt);
   }
 
-  console.log("For loop completed.");
+  // console.log("For loop completed.");
 
   this.amnt = amt;
-  console.log(this.amnt);
+  // console.log(this.amnt);
 
     this.registerService.create(this.data)
       .subscribe({

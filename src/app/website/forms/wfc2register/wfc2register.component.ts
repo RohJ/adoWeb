@@ -144,43 +144,43 @@ export class Wfc2registerComponent implements OnInit, OnDestroy, AfterViewInit {
   console.log(age);
 
   if (this.wfcForm.controls['paym'].value == 'Full Payment') {
-  if (this.wfcForm.controls['productinfo'].value == 'wfsmardehradun2024' && this.wfcForm.controls['residential'].value == 'Residential') {
-      console.log("Loop 1");
+  if (this.wfcForm.controls['productinfo'].value == 'wfsmardehradun2025' && this.wfcForm.controls['residential'].value == 'Residential') {
+      // console.log("Loop 1");
     if (age < 6) {
-      console.log("Loop 2");
+      // console.log("Loop 2");
       amt = amt + 0;
     } else if (age < 12) {
-      console.log("Loop 3");
+      // console.log("Loop 3");
       amt = amt + this.dehResChild;
     } else if (age > 12) {
-      console.log("Loop 4");
+      // console.log("Loop 4");
       amt = amt + this.dehRes;
     }
-  } else if (this.wfcForm.controls['productinfo'].value == 'wfsmardehradun2024' && this.wfcForm.controls['residential'].value == 'Non Residential') {
+  } else if (this.wfcForm.controls['productinfo'].value == 'wfsmardehradun2025' && this.wfcForm.controls['residential'].value == 'Non Residential') {
 
     if (age < 6) {
-      console.log("Loop 5");
+      // console.log("Loop 5");
       amt = amt + 0;
     } else if (age < 12) {
-      console.log("Loop 6");
+      // console.log("Loop 6");
       amt = amt + this.dehNonresChild;
     } else if (age > 12) {
-      console.log("Loop 7");
+      // console.log("Loop 7");
       amt = amt + this.dehNonres;
     }
-  } else if (this.wfcForm.controls['productinfo'].value != 'wfsmardehradun2024' && this.wfcForm.controls['residential'].value == 'Residential') {
+  } else if (this.wfcForm.controls['productinfo'].value != 'wfsmardehradun2025' && this.wfcForm.controls['residential'].value == 'Residential') {
 
     if (age < 6) {
-      console.log("Loop 8");
+      // console.log("Loop 8");
       amt = amt + 0;
     } else if (age < 12) {
-      console.log("Loop 9");
+      // console.log("Loop 9");
       amt = amt + this.resChild;
     } else if (age > 12) {
-      console.log("Loop 10");
+      // console.log("Loop 10");
       amt = amt + this.res;
     }
-  } else if (this.wfcForm.controls['productinfo'].value != 'wfsmardehradun2024' && this.wfcForm.controls['residential'].value == 'Non Residential') {
+  } else if (this.wfcForm.controls['productinfo'].value != 'wfsmardehradun2025' && this.wfcForm.controls['residential'].value == 'Non Residential') {
 
     if (age < 6) {
       amt = amt + 0;
@@ -197,13 +197,13 @@ export class Wfc2registerComponent implements OnInit, OnDestroy, AfterViewInit {
     amt = amt + 0;
   }
 }
-  console.log(amt);
+  // console.log(amt);
   }
 
-  console.log("For loop completed.");
+  // console.log("For loop completed.");
 
   this.amnt = amt;
-  console.log(this.amnt);
+  // console.log(this.amnt);
 
     this.registerService.create(this.data)
       .subscribe({
@@ -234,7 +234,7 @@ export class Wfc2registerComponent implements OnInit, OnDestroy, AfterViewInit {
       this.hashed = ('Z9XQW5'+'|'+this.registration.txnid+'|'+this.amnt+'|'+this.wfcForm.controls['productinfo'].value+'|'+this.registrationForm.at(0).get('firstname').value+'|'+this.registrationForm.at(0).get('email').value+'|'+udf1+'|'+udf2+'|'+udf3+'|'+udf4+'|'+udf5+'|'+'|'+'|'+'|'+'|'+'|'+this.salt);
     //  console.log(this.hashed);
       var hf = sha512(this.hashed);
-      console.log(this.registration.amount);
+      // console.log(this.registration.amount);
 
       let paymentForm = document.createElement('form');
       paymentForm.action = 'https://secure.payu.in/_payment';
