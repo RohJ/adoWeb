@@ -57,6 +57,13 @@
                         </div>
                     </div>
                   </div>
+                  <div *ngIf="items.summary =='TAMIL - Encounter with God'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
+                    <div class="card-plain card-form-horizontal">
+                        <div class="card-content text-dark">
+                          <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 600; background-color: white; font-size: medium;" [routerLink]="['/ewgtamilregister']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
+                        </div>
+                    </div>
+                  </div>
               </div>
               <hr *ngIf="i < 15"/>
             </div>
@@ -201,38 +208,8 @@
           <!-- </div> -->
       </div>
   </div>
-  <!-- Carousel Section -->
-  <div class="section" id="carousel" data-background-color="black">
-    <div class="container">
-      <div class="row mx-3">
-        <div class="col-md-4">
-          <h3 class="title text-white text-start" style="padding-top: 0px; margin-top: 0px;">Topics</h3>
-          <p><!-- • Foundations <br> -->
-            • Understanding God’s Heart<br>
-            • Root Causes of Rejection<br>
-            • Why Forgiveness? <br>
-            • Emotional Healing<br>
-            • Blessings and Curses<br>
-            • Relationships & Soul Ties <br>
-          </p>
-        </div>
-        <div class="col-md-8">
-          <ngb-carousel id="carousel" [interval]="2000">
-            <ng-template ngbSlide>
-              <img src="assets/img/ewg/ewg_2.webp" alt="Second slide" style="margin-bottom: 1em;">
-            </ng-template>
-            <ng-template ngbSlide>
-              <img src="assets/img/ewg/ewg_3.webp" alt="Third slide" style="margin-bottom: 1em;">
-            </ng-template>
-            <ng-template ngbSlide>
-              <img src="assets/img/ewg/ewg_4.webp" alt="Fourth slide" style="margin-bottom: 1em;">
-            </ng-template>
-          </ngb-carousel>
-        </div>
-      </div>
-    </div>
-  </div>
-<!-- Cost Venue Contact -->
+
+  <!-- Cost Venue Contact -->
   <div class="section" style="padding-top: 0rem; background-color:#E5EDFF;">
     <div class="container mx-auto">
                   <div class="row text-dark mx-3">
@@ -281,5 +258,38 @@
                   </div>
     </div>
   </div>
+
+  <!-- Carousel Section -->
+  <div class="section" id="carousel" data-background-color="black">
+    <div class="container">
+      <div class="row mx-3">
+        <div class="col-md-4">
+          <h3 class="title text-white text-start" style="padding-top: 0px; margin-top: 0px;">Topics</h3>
+          <p><!-- • Foundations <br> -->
+            • Understanding God’s Heart<br>
+            • Root Causes of Rejection<br>
+            • Why Forgiveness? <br>
+            • Emotional Healing<br>
+            • Blessings and Curses<br>
+            • Relationships & Soul Ties <br>
+          </p>
+        </div>
+        <div class="col-md-8">
+          <ngb-carousel id="carousel" [interval]="2000">
+            <ng-template ngbSlide>
+              <img src="assets/img/ewg/ewg_2.webp" alt="Second slide" style="margin-bottom: 1em;">
+            </ng-template>
+            <ng-template ngbSlide>
+              <img src="assets/img/ewg/ewg_3.webp" alt="Third slide" style="margin-bottom: 1em;">
+            </ng-template>
+            <ng-template ngbSlide>
+              <img src="assets/img/ewg/ewg_4.webp" alt="Fourth slide" style="margin-bottom: 1em;">
+            </ng-template>
+          </ngb-carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 </div>

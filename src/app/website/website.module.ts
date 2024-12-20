@@ -36,6 +36,7 @@ import { CampusComponent } from './campus/campus.component';
 import { YouthComponent } from './church/youth/youth.component';
 import { PolicyComponent } from './policy/policy.component';
 import { DiscipleshipComponent } from './discipleship/discipleship.component';
+import { EwgtamilregisterComponent } from './forms/ewgtamilregister/ewgtamilregister.component';
 
 
 
@@ -81,6 +82,7 @@ import { DiscipleshipComponent } from './discipleship/discipleship.component';
         YouthComponent,
         PolicyComponent,
         DiscipleshipComponent,
+        EwgtamilregisterComponent,
     ],
     exports:[ WebsiteComponent ],
     providers: [ authInterceptorProviders ]

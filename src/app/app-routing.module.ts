@@ -30,6 +30,7 @@ import { CampusComponent } from './website/campus/campus.component';
 import { YouthComponent } from './website/church/youth/youth.component';
 import { PolicyComponent } from './website/policy/policy.component';
 import { DiscipleshipComponent } from './website/discipleship/discipleship.component';
+import { EwgtamilregisterComponent } from './website/forms/ewgtamilregister/ewgtamilregister.component';
 
 
 const routes: Routes = [
@@ -61,6 +62,7 @@ const routes: Routes = [
   { path: 'youth',       component:YouthComponent},
   { path: 'policy',       component:PolicyComponent},
   { path: 'discipleship',       component:DiscipleshipComponent},
+  { path: 'ewgtamilregister',       component:EwgtamilregisterComponent},
 ];
 
 @NgModule({
