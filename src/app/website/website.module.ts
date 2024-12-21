@@ -37,6 +37,8 @@ import { YouthComponent } from './church/youth/youth.component';
 import { PolicyComponent } from './policy/policy.component';
 import { DiscipleshipComponent } from './discipleship/discipleship.component';
 import { EwgtamilregisterComponent } from './forms/ewgtamilregister/ewgtamilregister.component';
+import { GpcComponent } from './ministry/gpc/gpc.component';
+import { GpcregisterComponent } from './forms/gpcregister/gpcregister.component';
 
 
 
@@ -83,6 +85,8 @@ import { EwgtamilregisterComponent } from './forms/ewgtamilregister/ewgtamilregi
         PolicyComponent,
         DiscipleshipComponent,
         EwgtamilregisterComponent,
+        GpcComponent,
+        GpcregisterComponent,
     ],
     exports:[ WebsiteComponent ],
     providers: [ authInterceptorProviders ]

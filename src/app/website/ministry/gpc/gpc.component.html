@@ -1,0 +1,362 @@
+<div class="wrapper">
+  <div class="page-header page-header-small">
+      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/banners/gpc_banner.webp') ;">
+      </div>
+  </div>
+  <div class="section" style="padding-bottom: 30px;">
+    <div class="container">
+        <div class="button-container mx-3" style="margin-top: -96px !important;">
+          <div class="card tagcard" style="background-color: #FFE5DD; max-width: 790px !important;">
+            <div class="card-body text-dark">
+              <p class="tagline">Elevate Your Impact In Ministry:<br>"Ignite a Healthier Church Community in the midst of a morally deteriorating world."</p>
+            </div>
+          </div>
+        </div>
+        <p class="intro">This is a non-denominational forum dedicated to serving & nurturing the Body of Christ by:</p>
+        <p class="intro mb-1"><strong>Creating a Collaborative Platform:</strong></p>
+        <p class="intro mt-0">We aim to be a community which fosters collaboration between diverse segments of the Body of Christ, working towards building a healthy global Church.</p>
+        <p class="intro mb-1"><strong>Providing Practical Pastoral Training:</strong></p>
+        <p class="intro mt-0">We are committed to working with pastors and leaders, providing them with practical training to address the unique challenges of the 21st Century Church.</p>
+        <p class="intro mb-1"><strong>Establishing a Safe Haven for Ministers:</strong></p>
+        <p class="intro mt-0">Our conference offers a safe, nurturing environment where pastors and leaders can receive ministry in an un-prejudiced atmosphere.</p>
+        <p class="intro mt-0">Confidentiality is an integral value upheld by the ministry team.</p>
+        <p class="intro mb-1"><strong>Empowering Leaders:</strong></p>
+        <p class="intro mt-0">We seek to empower leaders by equipping them with teachings and resources in the inner healing and deliverance ministry.</p>
+        <p class="intro">At the Global Pastors Conference, we endeavor to strengthen Pastors & Leaders worldwide, foster unity, and equip leaders to effectively serve their communities, making a lasting impact on the world.</p>
+    </div>
+  </div>
+
+  <div class="container" style=" background-color: #000; border-radius: 12px;">
+    <div class="row mx-3">
+      <div class="card text-center mx-auto" style="max-width: 1050px; background-color: #000; margin-top: 30px; margin-bottom: 6px !important;">
+        <div class="card-body text-white">
+          <h6 style="margin-bottom: auto;">BUILDING A CHURCH MINISTRY TEAM</h6>
+          <p style="margin-top: 1rem; ">As a pastor, trying to meet the emotional and spiritual needs of people within the church, can be overwhelming. But having a well-trained ministry team will provide a safe place for those who struggle in their spiritual life due to unresolved hurts and memories of the past.</p>
+          <p style="margin-top: 1rem; ">As a ministry, we have many years of experience in developing ministry teams and also providing resources that could help churches fulfil their pastoral role.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="container">
+    <div class="row mx-2">
+      <div class="card text-center mx-auto" style="max-width: 650px; background-color: #000;">
+        <div class="card-body text-white">
+          <h6 style="margin-bottom: auto;">*PERSONAL MINISTRY AND CONFIDENTIALITY</h6>
+          <p style="margin-top: 1rem; font-size: small;">Each delegate is given the opportunity to receive a one-to-one personal ministry by a well-trained Ministry Team member. We ensure that the highest value of confidentiality is maintained with those who minister to the delegates.</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- Upcoming Dates -->
+
+  <div class="subscribe-line mx-3" data-background-color="white">
+    <div class="container">
+          <h3 class="title text-dark text-md-start" style="margin-bottom: 2rem;">Upcoming Dates</h3>
+
+          <div class="text-dark mx-3 mx-md-4" *ngFor="let items of sortedArray; let i = index">
+            <div *ngIf="items.summary =='Global Pastors Conference'">
+              <div *ngIf="i < 5" class="row" style="align-items: center;">
+                  <div class="col-md-3 col-6">
+                      <div class="card-plain card-form-horizontal">
+                          <div class="card-content">
+                              <h5 class="text-dark" style="text-align: start; font-weight: 700;">{{items.sdate | date:'mediumDate'}}</h5>
+                              <h5 class="text-dark" style="text-align: start; margin-bottom: 0px;">{{ items.sdate | date:'shortTime' }}</h5>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6">
+                      <div class="card-plain card-form-horizontal">
+                          <div class="card-content text-dark">
+                              <h4 class="text-dark" style="text-align: start; margin: 0 0;">{{ items.summary }}</h4>
+                          </div>
+                      </div>
+                  </div>
+                  <div *ngIf="items.summary =='Global Pastors Conference'" class="col-md-3 col-sm-6" style="text-align: -webkit-right;">
+                    <div class="card-plain card-form-horizontal">
+                        <div class="card-content text-dark">
+                          <button type="button" class="d-flex justify-content-start btn text-dark" style="border: 2px solid #111111 !important; font-weight: 600; background-color: white; font-size: medium;" [routerLink]="['/wfc1register']">Register Now<i class="fa fa-arrow-right fa-lg" style="margin-left: 0.5rem; margin-top: 3px;"></i></button>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <hr *ngIf="i < 15"/>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- Bangalore Cost Venue Contact -->
+  <div class="section" style="padding-top: 0rem; background-color:#FFE5DD;">
+    <div class="container mx-auto">
+                  <div class="row text-dark mx-3" >
+                    <h3 style="margin-top: 2em; font-weight: 600; margin-bottom: 0em;">Bangalore</h3>
+                      <div class="col-sm-6">
+                          <div class="text-start">
+                              <h4 class="title text-dark text-start">Cost</h4>
+                              <div class="row">
+                                <div class="col-md-6">
+                                  <h6 style="font-size: small; margin-top: 1em;">Rs. 2,000/- Non-Residential</h6>
+                                  <h6 style="font-size: small;">Rs. 3,500/- Residential</h6>
+                                  <h6 style="font-size: small; margin-top: 1em;">Rs. 1,000/- Pre-Registration</h6>
+                                </div>
+                                <div class="col-md-6">
+                                  <h6 style="margin-top: 1em;">For Children</h6>
+                                  <p style="font-size: small; ">
+                                    12 Yrs. & Above - Rs 3,500/-<br>
+                                    11 Yrs. to 6 Yrs. - Rs 1,000/-<br>
+                                    5 Yrs. & Below - Free
+                                  </p>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- <div class="col-sm-3 mt-md-5">
+                          <div >
+                              <h6 style="margin-top: 2em;">For Children</h6>
+                                <p style="font-size: small; ">
+                                  12 Yrs. & Above - Full Cost<br>
+                                  11 Yrs. to 6 Yrs. - 70% Cost<br>
+                                  5 Yrs. & Below - Free
+                                </p>
+                          </div>
+                      </div> -->
+                      <div class="col-sm-3">
+                          <div>
+                              <h4 class="title text-dark text-start">Venue</h4>
+                              <p style="font-size: small;">Adonai Church
+                                <br>No 1-8, 3rd Main Rd,
+                                <br>Hoysala Nagar,
+                                <br>Bangalore 560016.
+                              </p>
+                          </div>
+                      </div>
+                      <div class="col-sm-3">
+                          <div >
+                              <h4 class="title text-dark text-start">Contact</h4>
+                              <a type="button" class="btn" style="border: 2px solid #000000 !important; background-color: transparent; font-size: medium; color: #000000; font-weight: 700;" href="tel:+919886781749"><i class="fa fa-phone fa-lg" style="margin-right: 0.5rem; margin-top: 3px;"></i>+91 98867 81749</a>
+                                <h6 style="font-size: small;">Office timings:</h6>
+                                <p style="font-size: small;">9:00 am to 5:00 pm <br>(Tue to Sun)
+                                  </p>
+                          </div>
+                      </div>
+                  </div>
+    </div>
+  </div>
+
+  <!-- Carousel Section -->
+  <div class="section" id="carousel" data-background-color="black">
+    <div class="container">
+      <div class="row mx-3">
+        <div class="col-md-4">
+          <h3 class="title text-white text-start" style="padding-top: 0px; margin-top: 0px;">Topics</h3>
+          <p>• Foundational Truths <br>
+            • Principles Of Acceptance<br>
+            • Dealing With Rejection<br>
+            • Principles Of Forgiveness<br>
+            • Relationships And Soul-Ties<br>
+            • Overcoming Fear<br>
+            • The Spiritual Realms<br>
+            • Blessings And Curses<br>
+            • How Demons Gain Access<br>
+            • Generational Iniquity<br>
+            • Belief Systems<br>
+            • Dealing With Emotional Pain<br>
+            • Restoring The Human Spirit<br>
+          </p>
+        </div>
+        <div class="col-md-8">
+          <ngb-carousel id="carousel" [interval]="2000">
+            <ng-template ngbSlide>
+              <img src="assets/img/gpc/gpc1.webp" alt="First slide" style="margin-bottom: 1em;">
+            </ng-template>
+            <ng-template ngbSlide>
+              <img src="assets/img/gpc/gpc2.webp" alt="Second slide" style="margin-bottom: 1em;">
+            </ng-template>
+          </ngb-carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Patron Section -->
+  <div class="section" data-background-color="gray">
+    <div class="container">
+
+      <div class="row mx-3 d-flex align-items-center">
+        <h3 class="title text-dark text-center" style="padding-top: 0px; margin-top: 0px;">Our Patrons</h3>
+        <p class="text-center">In the past decade, many pastors and their congregations have attended the Wholeness and Freedom Conferences 1 and 2, this has brought tremendous healing and wholeness in Churches. The unity amongst churches to see healthier congregations has set the stage for the Global Pastors Conference </p>
+        <div class="col-md-3 text-center mt-3">
+          <img src="assets/img/gpc/gateway_logo.webp">
+        </div>
+        <div class="col-md-3 text-center mt-3">
+          <img src="assets/img/gpc/nlf_logo.webp">
+        </div>
+        <div class="col-md-3 text-center mt-3">
+          <img src="assets/img/gpc/lw_logo.webp" style="filter: drop-shadow(2px 4px 6px black);">
+        </div>
+        <div class="col-md-3 text-center mt-3">
+          <img src="assets/img/gpc/cbc_logo.webp">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonies -->
+  <!-- <section class="section-cards mb-5">
+    <div class="content-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-10 col-12 mx-auto text-start">
+            <h2 class="title text-dark text-center mx-auto" style="font-weight: 700;">Testimonies</h2>
+          </div>
+          <div class="col-md-12 col-md-6">
+            <div class="gpc-cards d-flex flex-column-reverse">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides text-center">
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">Freed from Burdens</h6>
+                          <div style="padding:56.25% 0 0 0;position:relative;">
+                              <iframe src="https://player.vimeo.com/video/917412189?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Divya Sudhakar &amp; Vineetha"></iframe>
+                          </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">Identity Renewed</h6>
+                        <div style="padding:56.25% 0 0 0;position:relative;">
+                          <iframe src="https://player.vimeo.com/video/917412238?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Denver &amp; Mariska"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">Promise Keeper</h6>
+                        <div style="padding:56.25% 0 0 0;position:relative;">
+                          <iframe src="https://player.vimeo.com/video/917412283?h=9858b5213b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Cathan &amp; Mable"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">Filled with the Holy Spirit</h6>
+                          <div style="padding:56.25% 0 0 0;position:relative;">
+                              <iframe src="https://player.vimeo.com/video/917412313?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Divya Sudhakar &amp; Vineetha"></iframe>
+                          </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">Growth through praise</h6>
+                        <div style="padding:56.25% 0 0 0;position:relative;">
+                          <iframe src="https://player.vimeo.com/video/917412340?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Denver &amp; Mariska"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">Truth has set me free</h6>
+                        <div style="padding:56.25% 0 0 0;position:relative;">
+                          <iframe src="https://player.vimeo.com/video/917412367?h=9858b5213b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Cathan &amp; Mable"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">Healed from Insomnia</h6>
+                          <div style="padding:56.25% 0 0 0;position:relative;">
+                              <iframe src="https://player.vimeo.com/video/917412394?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Divya Sudhakar &amp; Vineetha"></iframe>
+                          </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">My Strong Tower</h6>
+                        <div style="padding:56.25% 0 0 0;position:relative;">
+                          <iframe src="https://player.vimeo.com/video/917412432?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Denver &amp; Mariska"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">Healed from Spondylitis</h6>
+                        <div style="padding:56.25% 0 0 0;position:relative;">
+                          <iframe src="https://player.vimeo.com/video/917412467?h=9858b5213b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Cathan &amp; Mable"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">Healing from Accidents</h6>
+                          <div style="padding:56.25% 0 0 0;position:relative;">
+                              <iframe src="https://player.vimeo.com/video/917412501?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Divya Sudhakar &amp; Vineetha"></iframe>
+                          </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">Marriage restored</h6>
+                        <div style="padding:56.25% 0 0 0;position:relative;">
+                          <iframe src="https://player.vimeo.com/video/917412544?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Denver &amp; Mariska"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide">
+                    <div class="card card-testimonial">
+                      <div class="card-body text-start">
+                        <h6 class="card-category">Freedom from Soul Tie</h6>
+                        <div style="padding:56.25% 0 0 0;position:relative;">
+                          <iframe src="https://player.vimeo.com/video/917412578?h=9858b5213b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Cathan &amp; Mable"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="glide__arrows" data-glide-el="controls">
+                <button
+                  style="border: 3px solid #000;"
+                  class="glide__arrow glide__arrow--left text-default"
+                  aria-label="Previous"
+                  data-glide-dir="<"
+                >
+                  <i class="fa fa-arrow-left"> </i>
+                </button>
+                <button
+                  style="border: 3px solid #000;"
+                  class="glide__arrow glide__arrow--right text-default"
+                  aria-label="Next"
+                  data-glide-dir=">"
+                >
+                  <i class="fa fa-arrow-right"> </i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+</div>

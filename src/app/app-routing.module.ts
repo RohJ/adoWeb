@@ -31,6 +31,8 @@ import { YouthComponent } from './website/church/youth/youth.component';
 import { PolicyComponent } from './website/policy/policy.component';
 import { DiscipleshipComponent } from './website/discipleship/discipleship.component';
 import { EwgtamilregisterComponent } from './website/forms/ewgtamilregister/ewgtamilregister.component';
+import { GpcComponent } from './website/ministry/gpc/gpc.component';
+import { GpcregisterComponent } from './website/forms/gpcregister/gpcregister.component';
 
 
 const routes: Routes = [
@@ -63,6 +65,8 @@ const routes: Routes = [
   { path: 'policy',       component:PolicyComponent},
   { path: 'discipleship',       component:DiscipleshipComponent},
   { path: 'ewgtamilregister',       component:EwgtamilregisterComponent},
+  { path: 'gpc',       component:GpcComponent},
+  { path: 'gpcregister',       component:GpcregisterComponent},
 ];
 
 @NgModule({
