@@ -1,0 +1,37 @@
+// Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Optional Theme Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+.glide__arrow {
+  position: relative;
+  // display:inline-block;
+  top: 15px;
+  // bottom: -70px;
+  z-index: 2;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 9px 12px;
+  background-color: transparent;
+  border: 2px solid hsla(0,0%,100%,.5);
+  border-radius: 4px;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,.1);
+  text-shadow: 0 0.25em 0.5em rgba(0,0,0,.1);
+  opacity: 1;
+  cursor: pointer;
+  -webkit-transition: opacity .15s ease,border .3s ease-in-out;
+  transition: opacity .15s ease,border .3s ease-in-out;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  line-height: 1;
+  float: right;
+}
+
+.glide__arrow--left {
+  left: -5em;
+}
+
+.glide__arrow--right {
+  right: -2em;
+}

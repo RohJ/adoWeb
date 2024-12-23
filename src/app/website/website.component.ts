@@ -4,6 +4,8 @@ import { UserService } from '../_services/user.service';
 
 import * as Rellax from 'rellax';
 
+import Glide from "@glidejs/glide";
+
 
 @Component({
   selector: 'app-website',
@@ -31,13 +33,39 @@ export class WebsiteComponent implements OnInit, OnDestroy, AfterViewInit {
 
    constructor(private userAccess: UserService, config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
-		config.showNavigationArrows = false;
+		config.showNavigationArrows = true;
 		config.showNavigationIndicators = false;
     // config.animation = true;
    }
 
 
   ngOnInit() {
+
+    new Glide(".home-cards", {
+      type: "carousel",
+      startAt: 1,
+      focusAt: 1,
+      perTouch: 1,
+      perview: 1,
+      autoplay: 0,
+      // breakpoints: {
+      //   2560: {
+      //     perView: 2
+      //   },
+      //   1440: {
+      //     perView: 2
+      //   },
+      //   1024: {
+      //     perView: 2
+      //   },
+      //   768: {
+      //     perView: 2
+      //   },
+      //   600: {
+      //     perView: 1
+      //   }
+      // },
+    }).mount();
 
     this.userAccess.getEvents()
     .subscribe({
@@ -110,6 +138,8 @@ export class WebsiteComponent implements OnInit, OnDestroy, AfterViewInit {
       body.classList.add('presentation-page');
       // var navbar = document.getElementsByTagName('nav')[0];
       // navbar.classList.add('navbar-transparent');
+
+
   }
 
   ngAfterViewInit(){
