@@ -4,7 +4,7 @@ import { UserService } from '../_services/user.service';
 
 import * as Rellax from 'rellax';
 
-import Glide from "@glidejs/glide";
+// import Glide from "@glidejs/glide";
 
 
 @Component({
@@ -41,31 +41,34 @@ export class WebsiteComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit() {
 
-    new Glide(".home-cards", {
-      type: "carousel",
-      startAt: 0,
-      focusAt: 0,
-      perTouch: 1,
-      perview: 3,
-      autoplay: 0,
-      breakpoints: {
-        2560: {
-          perView: 3
-        },
-        1440: {
-          perView: 3
-        },
-        1024: {
-          perView: 3
-        },
-        768: {
-          perView: 2
-        },
-        600: {
-          perView: 1
-        }
-      },
-    }).mount();
+    var body = document.getElementsByTagName('body')[0];
+    body.classList.add('presentation-page');
+
+    // new Glide(".home-cards", {
+    //   type: "carousel",
+    //   startAt: 1,
+    //   focusAt: 1,
+    //   perTouch: 1,
+    //   perview: 3,
+    //   autoplay: 0,
+    //   breakpoints: {
+    //     2560: {
+    //       perView: 3
+    //     },
+    //     1440: {
+    //       perView: 3
+    //     },
+    //     1024: {
+    //       perView: 3
+    //     },
+    //     768: {
+    //       perView: 2
+    //     },
+    //     600: {
+    //       perView: 1
+    //     }
+    //   },
+    // }).mount();
 
     this.userAccess.getEvents()
     .subscribe({
@@ -134,8 +137,7 @@ export class WebsiteComponent implements OnInit, OnDestroy, AfterViewInit {
       }
     });
 
-      var body = document.getElementsByTagName('body')[0];
-      body.classList.add('presentation-page');
+
       // var navbar = document.getElementsByTagName('nav')[0];
       // navbar.classList.add('navbar-transparent');
 
