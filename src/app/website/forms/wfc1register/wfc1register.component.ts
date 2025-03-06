@@ -42,10 +42,10 @@ export class Wfc1registerComponent implements OnInit, OnDestroy, AfterViewInit {
     amnt:number = 0;
 
     // Dehradun Registration Amounts
-    dehRes:number = 6000;
-    dehNonres:number = 4000;
-    dehResChild:number = 4200;
-    dehNonresChild:number = 2800;
+    // dehRes:number = 6000;
+    // dehNonres:number = 4000;
+    // dehResChild:number = 4200;
+    // dehNonresChild:number = 2800;
 
     // Bangalore Registration Amounts
     res = 9000;
@@ -142,31 +142,34 @@ export class Wfc1registerComponent implements OnInit, OnDestroy, AfterViewInit {
   console.log(age);
 
   if (this.wfcForm.controls['paym'].value == 'Full Payment') {
-  if (this.wfcForm.controls['productinfo'].value == 'wfcjundehradun2025' && this.wfcForm.controls['residential'].value == 'Residential') {
-      // console.log("Loop 1");
-    if (age < 6) {
-      // console.log("Loop 2");
-      amt = amt + 0;
-    } else if (age < 12) {
-      // console.log("Loop 3");
-      amt = amt + this.dehResChild;
-    } else if (age > 12) {
-      // console.log("Loop 4");
-      amt = amt + this.dehRes;
-    }
-  } else if (this.wfcForm.controls['productinfo'].value == 'wfcjundehradun2025' && this.wfcForm.controls['residential'].value == 'Non Residential') {
 
-    if (age < 6) {
-      // console.log("Loop 5");
-      amt = amt + 0;
-    } else if (age < 12) {
-      // console.log("Loop 6");
-      amt = amt + this.dehNonresChild;
-    } else if (age > 12) {
-      // console.log("Loop 7");
-      amt = amt + this.dehNonres;
-    }
-  } else if (this.wfcForm.controls['productinfo'].value != 'wfcjundehradun2025' && this.wfcForm.controls['residential'].value == 'Residential') {
+  // Dehradun Registration calculation
+  // if (this.wfcForm.controls['productinfo'].value == 'wfcjundehradun2025' && this.wfcForm.controls['residential'].value == 'Residential') {
+  //     // console.log("Loop 1");
+  //   if (age < 6) {
+  //     // console.log("Loop 2");
+  //     amt = amt + 0;
+  //   } else if (age < 12) {
+  //     // console.log("Loop 3");
+  //     amt = amt + this.dehResChild;
+  //   } else if (age > 12) {
+  //     // console.log("Loop 4");
+  //     amt = amt + this.dehRes;
+  //   }
+  // } else
+
+  // if (this.wfcForm.controls['productinfo'].value == 'wfcjundehradun2025' && this.wfcForm.controls['residential'].value == 'Non Residential') {
+
+  //   if (age < 6) {
+  //     amt = amt + 0;
+  //   } else if (age < 12) {
+  //     amt = amt + this.dehNonresChild;
+  //   } else if (age > 12) {
+  //     amt = amt + this.dehNonres;
+  //   }
+  // } else
+
+  if (this.wfcForm.controls['productinfo'].value != 'wfcjundehradun2025' && this.wfcForm.controls['residential'].value == 'Residential') {
 
     if (age < 6) {
       // console.log("Loop 8");

@@ -42,9 +42,9 @@ export class EwgtamilregisterComponent implements OnInit, OnDestroy, AfterViewIn
       amnt:number = 0;
 
       // Bangalore Registration Amounts
-      // res = 2100;
+      res = 500;
       nonres = 500;
-      // resChild = 1470;
+      resChild = 350;
       nonresChild = 350;
 
       // Pre-registration
@@ -132,16 +132,15 @@ export class EwgtamilregisterComponent implements OnInit, OnDestroy, AfterViewIn
     console.log(age);
 
     if (this.wfcForm.controls['paym'].value == 'Full Payment') {
-    // if (this.wfcForm.controls['residential'].value == 'Residential') {
-    //   if (age < 6) {
-    //     amt = amt + 0;
-    //   } else if (age < 12) {
-    //     amt = amt + this.resChild;
-    //   } else if (age > 12) {
-    //     amt = amt + this.res;
-    //   }
-    // } else
-    if (this.wfcForm.controls['residential'].value == 'Non Residential') {
+    if (this.wfcForm.controls['residential'].value == 'Residential') {
+      if (age < 6) {
+        amt = amt + 0;
+      } else if (age < 12) {
+        amt = amt + this.resChild;
+      } else if (age > 12) {
+        amt = amt + this.res;
+      }
+    } else if (this.wfcForm.controls['residential'].value == 'Non Residential') {
 
       if (age < 6) {
         // console.log("Loop 5");
