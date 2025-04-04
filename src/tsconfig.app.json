@@ -13,7 +13,9 @@
     "outDir": "../out-tsc/app",
     "module": "es2015",
     "baseUrl": "",
-    "types": []
+    "types": [
+      "@angular/localize"
+    ]
   },
   "exclude": [
     "test.ts",
