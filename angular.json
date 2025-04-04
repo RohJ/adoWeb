@@ -74,14 +74,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "adoWeb:build"
+            "buildTarget": "adoWeb:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "adoWeb:build:production"
+              "buildTarget": "adoWeb:build:production"
             },
             "development": {
-              "browserTarget": "adoWeb:build:development"
+              "buildTarget": "adoWeb:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "adoWeb:build"
+            "buildTarget": "adoWeb:build"
           }
         },
         "test": {
