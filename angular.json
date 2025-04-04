@@ -21,7 +21,7 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
-              "src/polyfills.ts"
+              "zone.js"
             ],
             "tsConfig": "src/tsconfig.app.json",
             "allowedCommonJsDependencies": ["nouislider", "rellax", "rxjs", "@tweenjs/tween.js","js-sha512"],
@@ -98,7 +98,7 @@
             "main": "src/test.ts",
             "karmaConfig": "./karma.conf.js",
             "polyfills": [
-              "src/polyfills.ts"
+              "zone.js"
             ],
             "tsConfig": "src/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
