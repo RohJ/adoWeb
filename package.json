@@ -41,11 +41,11 @@
     "rellax": "1.12.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.6.2",
-    "zone.js": "~0.13.0"
+    "zone.js": "~0.13.3"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^19.2.6",
-    "@angular/cli": "~16.2.14",
+    "@angular-devkit/build-angular": "^16.2.16",
+    "@angular/cli": "~16.2.16",
     "@angular/compiler-cli": "^16.2.12",
     "@types/gapi": "^0.0.47",
     "@types/gapi.auth2": "^0.0.60",
