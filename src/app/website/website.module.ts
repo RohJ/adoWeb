@@ -42,7 +42,6 @@ import { GpcregisterComponent } from './forms/gpcregister/gpcregister.component'
 
 
 
-
 @NgModule({
     imports: [
         CommonModule,
