@@ -1,275 +1,539 @@
 <div class="wrapper">
   <div class="page-header page-header-small">
-      <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/banners/ewg_banner.webp') ;">
-      </div>
+    <div
+      class="page-header-image rellax-header"
+      data-rellax-speed="-8"
+      style="background-image: url('assets/img/banners/ewg_banner.webp')"
+    ></div>
   </div>
-  <div class="section" style="padding-bottom: 30px;">
-      <div class="container">
-          <div class="button-container mx-3">
-            <div class="card tagcard" style="background-color: #E5EDFF;">
-              <div class="card-body text-dark">
-                <p class="tagline">Freedom Over a Weekend</p>
-              </div>
-            </div>
+  <div class="section" style="padding-bottom: 30px">
+    <div class="container">
+      <div class="button-container mx-3">
+        <div class="card tagcard" style="background-color: #e5edff">
+          <div class="card-body text-dark">
+            <p class="tagline">Freedom Over a Weekend</p>
           </div>
+        </div>
       </div>
+    </div>
   </div>
   <div class="container">
     <div class="row mx-3 justify-content-center">
-  <!-- <div class="container" style="padding-bottom: 2rem;">
+      <!-- <div class="container" style="padding-bottom: 2rem;">
     <div class="row" style="justify-content: center;"> -->
 
-            <div class="mt-3 col-md-6">
+      <div class="mt-3 col-md-6">
         <!--    <img class="img w-30 mx-auto d-block" src="assets/img/AdonaiLogo.png">  -->
-            <div class="card mx-3" style="width: fit-content;">
-                <h5 class="card-header text-center py-3"><img class="img w-25 mx-auto" src="assets/img/AdonaiLogo.png" style="width: 6rem;">Encounter with God Registration Form</h5>
-                  <div class="card-body" >
-                    <form [formGroup]='wfcForm' novalidate class="form" (ngSubmit)='saveRegistration()'>
-
-                      <div class="form-row mt-5">
-                        <div class="form-group w-100" >
-                            <label class="mb-2" style="font-size: larger;">Conference</label>
-                            <!--><h6 style="color: red;">Registrations are full for Month. Please register for NextMonth.</h6>-->
-                            <select formControlName="productinfo" class="form-control form-select" name="productinfo" id="productinfo" >
-                              <option disabled >Choose the Conference Dates</option>
-                              <!-- <option value="ewgjanbangalore2025">Jan 11 to 12</option> -->
-                              <!-- <option value="ewgfebbangalore2025">Feb 8 to 9</option> -->
-                              <!-- <option value="ewgmarbangalore2025">Mar 8 to 9</option> -->
-                              <option value="ewgjunbangalore2025">Jun 14 to 15</option>
-                              <option value="ewgjulbangalore2025">Jul 12 to 13</option>
-                              <option value="ewgoctbangalore2025">Oct 11 to 12</option>
-                              <!-- <option value="ewgnovbangalore2024">Nov 16 to 17</option> -->
-                            </select>
-                        </div>
-                      </div>
-                      <div class="col-md-5">
-                        <div class="alert alert-danger"
-                          *ngIf="f['productinfo'].errors?.['required'] && f['productinfo'].touched">
-                          Conference Date is required!
-                        </div>
-                      </div>
-
-                      <div class="form-row mt-5">
-                        <div class="form-group w-100" >
-                            <label class="mb-2" style="font-size: larger;">Registering as</label>
-                            <select formControlName="type" class="form-control form-select" name="type" id="type" (change)='disableAdd()'>
-                              <option value="Individual" >Individual</option>
-                              <option value="Married Couple">Married Couple</option>
-                              <option value="Family">Family</option>
-                              <option value="Group">Group</option>
-                            </select>
-                        </div>
-                      </div>
-                      <div class="col-md-5">
-                        <div class="alert alert-danger"
-                          *ngIf="f['type'].errors?.['required'] && f['type'].touched">
-                          Registration Type is required!
-                        </div>
-                      </div>
-
-                      <div class="form-row mt-5">
-                        <div class="form-group w-100" >
-                            <label class="mb-2" style="font-size: larger;">Type of Registration</label>
-                            <select formControlName="residential" class="form-control form-select" name="residential" id="residential">
-                              <option value="Residential">Residential</option>
-                              <option value="Non Residential">Non Residential</option>
-                            </select>
-                        </div>
-                      </div>
-                      <div class="col-md-5">
-                        <div class="alert alert-danger"
-                          *ngIf="f['residential'].errors?.['required'] && f['residential'].touched">
-                          Registration Type is required!
-                        </div>
-                      </div>
-
-                      <div class="form-row mt-5">
-                        <div class="form-group w-100">
-                            <label class="mb-2" style="font-size: larger;">Arrival at the venue</label>
-                            <div class="form-group w-100"  style="margin-top: 0.8rem; margin-left: 0.1rem; font-size: large;">
-                              <input formControlName='arrival' class="input100" type="datetime-local" id="arrival" name="arrival" placeholder="Date and Time of arrival">
-                            </div>
-                        </div>
-                      </div>
-                      <div class="alert alert-danger"
-                          *ngIf="f['arrival'].errors?.['required'] && f['arrival'].touched">
-                          Arrival details are required!
-                      </div>
-
-                      <div class="mt-5" formArrayName="registrationForm" *ngFor="let t of registrationForm.controls; let i = index">
-
-                        <div class="row" [formGroupName]="i">
-                          <div class="col-md-4">
-                            <label style="font-size: larger; font-weight: 600;">Person {{i+1}}</label>
-                          </div>
-                        </div>
-
-                        <div class="form-row">
-                          <div class="form-row mt-3">
-                            <div class="form-group w-100" [formGroupName]="i">
-                                <label class="mb-2" style="font-size: larger;">First Name</label>
-                                <input formControlName='firstname' id="{{'firstname'+i}}" type="text" class="form-control" placeholder="Enter First Name" />
-                            </div>
-                          </div>
-                        </div>
-                          <div class="col-md-5">
-                              <div class="alert alert-danger"
-                                *ngIf="registrationForm.controls[i].get('firstname').hasError('required') && registrationForm.controls[i].get('firstname').touched">
-                                First Name is required!
-                              </div>
-                          </div>
-                          <div class="form-row">
-                            <div class="form-row mt-5">
-                              <div class="form-group w-100" [formGroupName]="i">
-                                  <label class="mb-2" style="font-size: larger;">Last Name</label>
-                                  <input formControlName='lastname' id="{{'lastname'+i}}" type="text" class="form-control" placeholder="Enter Last Name" />
-                              </div>
-                            </div>
-                          </div>
-                            <div class="col-md-5">
-                                <div class="alert alert-danger"
-                                  *ngIf="registrationForm.controls[i].get('lastname').hasError('required') && registrationForm.controls[i].get('lastname').touched">
-                                  Last Name is required!
-                                </div>
-                            </div>
-
-
-                          <div class="form-row mt-5">
-                            <div class="form-group w-100" [formGroupName]="i">
-                                <label class="mb-2" style="font-size: larger;">Gender</label>
-                                <select formControlName="gender" class="form-control form-select" name="gender" id="{{'gender'+i}}">
-                                  <option value="Male">Male</option>
-                                  <option value="Female">Female</option>
-                                </select>
-                            </div>
-                          </div>
-                          <div class="col-md-5">
-                            <div class="alert alert-danger"
-                              *ngIf="registrationForm.controls[i].get('gender').hasError('required') && registrationForm.controls[i].get('gender').touched">
-                              Gender is required!
-                            </div>
-                          </div>
-
-                          <div class="form-row mt-5">
-                            <div class="form-group w-100" [formGroupName]="i">
-                                <label class="mb-2" style="font-size: larger;">Email</label>
-                                <input formControlName='email' id="{{'email'+i}}" type="email" class="form-control" placeholder="Enter Email" />
-                            </div>
-                          </div>
-                          <div class="col-md-5">
-                            <div class="alert alert-danger"
-                              *ngIf="registrationForm.controls[i].get('email').hasError('required') && registrationForm.controls[i].get('email').touched">
-                              Email is required!
-                            </div>
-                          </div>
-
-
-                          <div class="form-row mt-5">
-                            <div class="form-group w-100" [formGroupName]="i">
-                                <label class="mb-2" style="font-size: larger;">Age</label>
-                                <input formControlName='age' id="{{'age' + i}}" type="number" class="form-control" placeholder="Enter Age" />
-                            </div>
-                          </div>
-                          <div class="col-md-5">
-                            <div class="alert alert-danger"
-                              *ngIf="registrationForm.controls[i].get('age').hasError('required') && registrationForm.controls[i].get('age').touched">
-                              Age is required!
-                            </div>
-                          </div>
-
-                          <div class="form-row mt-5">
-                            <div class="form-group w-100" [formGroupName]="i">
-                                <label class="mb-2" style="font-size: larger;">Mobile</label>
-                                <input formControlName='phone' id="{{'phone' + i}}" type="number" class="form-control" placeholder="Enter Mobile Number" />
-                            </div>
-                          </div>
-                          <div class="col-md-5">
-                            <div class="alert alert-danger"
-                              *ngIf="registrationForm.controls[i].get('phone').hasError('required') && registrationForm.controls[i].get('phone').touched">
-                              Mobile Number is required!
-                            </div>
-                            <div class="alert alert-danger"
-                              *ngIf="registrationForm.controls[i].get('phone').hasError('pattern') && registrationForm.controls[i].get('phone').touched">
-                              Invalid mobile number!
-                            </div>
-                          </div>
-
-                          <div class="form-row mt-5">
-                            <div class="form-group w-100" [formGroupName]="i">
-                                <label class="mb-2" style="font-size: larger;">City</label>
-                                <input formControlName='city' id="{{'city' + i}}" type="text" class="form-control" placeholder="Enter City" />
-                            </div>
-                          </div>
-                          <div class="col-md-5">
-                            <div class="alert alert-danger"
-                              *ngIf="registrationForm.controls[i].get('city').hasError('required') && registrationForm.controls[i].get('city').touched">
-                              City is required!
-                            </div>
-                            <div class="alert alert-danger"
-                              *ngIf="registrationForm.controls[i].get('city').hasError('pattern') && registrationForm.controls[i].get('city').touched">
-                              Invalid city name!
-                            </div>
-                          </div>
-
-
-
-                          <div class="col-md-6 mt-5">
-                            <button class="btn btn-danger" [disabled]="i === 0 || i === 1 || f['type'].value == 'Individual' || f['type'].value == 'Married Couple'" (click)='removePerson(i)'>Remove Person {{i+1}}</button>
-                          </div>
-                        </div>
-                  <!--    </div>  -->
-
-                  <div class="form-row mt-5">
-                    <div class="form-group w-100" >
-                        <label class="mb-2" style="font-size: larger;">Payment Type</label>
-                        <select formControlName="paym" class="form-control form-select" name="paym" id="paym">
-                          <option value="Full Payment">Full Registration</option>
-                          <option value="Part Payment">Part Registration</option>
-                        </select>
-                    </div>
-                  </div>
-                  <div class="col-md-5">
-                    <div class="alert alert-danger"
-                      *ngIf="f['paym'].errors?.['required'] && f['paym'].touched">
-                      Payment Type is required!
-                    </div>
-                  </div>
-
-                      <div class="col-md-6 mt-5">
-                        <button class="btn btn-danger" id="add" type="button" [disabled]="isDisabled" (click)='addPerson()'>Add Another Person</button>
-                      </div>
-
-                      <div class="form-row mt-5">
-                        <!--Checkbox for agree-->
-                        <input type="checkbox" formControlName="agree" class="col-md-2" style="vertical-align: top;">
-                        <label class="mb-2" class="checkbox col-md-10" style="font-size: small; padding-bottom: 0.4rem; margin-top: 0px;">“I hereby confirm and declare that my attendance and presence at the Encounter with God Conference, organized by Adonai Ministries, is out of my own free will, volition and sound judgement”</label>
-                        <button type="button" class="btn btn-outline-default offset-md-2" href="#" (click)="open(consent)" style="font-size: xx-small; padding: 0rem 9px; font-weight: 400;">Read More</button>
-
-                        <div class="alert alert-danger" *ngIf="f['agree'].errors?.['required'] && f['agree'].touched ">Must check in order to submit.</div>
-                    </div>
-
-                      <div class="form-row mt-5">
-                        <button class="btn btn-danger" type="submit" [disabled]="wfcForm.invalid">Submit</button>
-                      </div>
-                    </form>
+        <div class="card mx-3" style="width: fit-content">
+          <h5 class="card-header text-center py-3">
+            <img
+              class="img w-25 mx-auto"
+              src="assets/img/AdonaiLogo.png"
+              style="width: 6rem"
+            />Encounter with God Registration Form
+          </h5>
+          <div class="card-body">
+            <form
+              [formGroup]="wfcForm"
+              novalidate
+              class="form"
+              (ngSubmit)="saveRegistration()"
+            >
+              <div class="form-row mt-5">
+                <div class="form-group w-100">
+                  <label class="mb-2" style="font-size: larger"
+                    >Conference</label
+                  >
+                  <!--<h6 style="color: red;">Registrations are full for Month. Please register for NextMonth.</h6>-->
+                  <select
+                    formControlName="productinfo"
+                    class="form-control form-select"
+                    name="productinfo"
+                    id="productinfo"
+                  >
+                    <option disabled>Choose the Conference Dates</option>
+                    <!-- <option value="ewgjanbangalore2025">Jan 11 to 12</option> -->
+                    <!-- <option value="ewgfebbangalore2025">Feb 8 to 9</option> -->
+                    <!-- <option value="ewgmarbangalore2025">Mar 8 to 9</option> -->
+                    <option value="ewgjunbangalore2025">Jun 14 to 15</option>
+                    <option value="ewgjulbangalore2025">Jul 12 to 13</option>
+                    <option value="ewgoctbangalore2025">Oct 11 to 12</option>
+                    <!-- <option value="ewgnovbangalore2024">Nov 16 to 17</option> -->
+                  </select>
                 </div>
-            </div>
+              </div>
+              <div class="col-md-5">
+                <div
+                  class="alert alert-danger"
+                  *ngIf="f['productinfo'].errors?.['required'] && f['productinfo'].touched"
+                >
+                  Conference Date is required!
+                </div>
+              </div>
+
+              <div class="form-row mt-5">
+                <div class="form-group w-100">
+                  <label class="mb-2" style="font-size: larger"
+                    >Registering as</label
+                  >
+                  <select
+                    formControlName="type"
+                    class="form-control form-select"
+                    name="type"
+                    id="type"
+                    (change)="disableAdd()"
+                  >
+                    <option value="Individual">Individual</option>
+                    <option value="Married Couple">Married Couple</option>
+                    <option value="Family">Family</option>
+                    <option value="Group">Group</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div
+                  class="alert alert-danger"
+                  *ngIf="f['type'].errors?.['required'] && f['type'].touched"
+                >
+                  Registration Type is required!
+                </div>
+              </div>
+
+              <div class="form-row mt-5">
+                <div class="form-group w-100">
+                  <label class="mb-2" style="font-size: larger"
+                    >Type of Registration</label
+                  >
+                  <select
+                    formControlName="residential"
+                    class="form-control form-select"
+                    name="residential"
+                    id="residential"
+                  >
+                    <option value="Residential">Residential</option>
+                    <option value="Non Residential">Non Residential</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div
+                  class="alert alert-danger"
+                  *ngIf="f['residential'].errors?.['required'] && f['residential'].touched"
+                >
+                  Registration Type is required!
+                </div>
+              </div>
+
+              <div class="form-row mt-5">
+                <div class="form-group w-100">
+                  <label class="mb-2" style="font-size: larger"
+                    >Arrival at the venue</label
+                  >
+                  <div
+                    class="form-group w-100"
+                    style="
+                      margin-top: 0.8rem;
+                      margin-left: 0.1rem;
+                      font-size: large;
+                    "
+                  >
+                    <input
+                      formControlName="arrival"
+                      class="input100"
+                      type="datetime-local"
+                      id="arrival"
+                      name="arrival"
+                      placeholder="Date and Time of arrival"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="alert alert-danger"
+                *ngIf="f['arrival'].errors?.['required'] && f['arrival'].touched"
+              >
+                Arrival details are required!
+              </div>
+
+              <div
+                class="mt-5"
+                formArrayName="registrationForm"
+                *ngFor="let t of registrationForm.controls; let i = index"
+              >
+                <div class="row" [formGroupName]="i">
+                  <div class="col-md-4">
+                    <label style="font-size: larger; font-weight: 600"
+                      >Person {{ i + 1 }}</label
+                    >
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-row mt-3">
+                    <div class="form-group w-100" [formGroupName]="i">
+                      <label class="mb-2" style="font-size: larger"
+                        >First Name</label
+                      >
+                      <input
+                        formControlName="firstname"
+                        id="{{ 'firstname' + i }}"
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter First Name"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      registrationForm.controls[i]
+                        .get('firstname')
+                        .hasError('required') &&
+                      registrationForm.controls[i].get('firstname').touched
+                    "
+                  >
+                    First Name is required!
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-row mt-5">
+                    <div class="form-group w-100" [formGroupName]="i">
+                      <label class="mb-2" style="font-size: larger"
+                        >Last Name</label
+                      >
+                      <input
+                        formControlName="lastname"
+                        id="{{ 'lastname' + i }}"
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Last Name"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      registrationForm.controls[i]
+                        .get('lastname')
+                        .hasError('required') &&
+                      registrationForm.controls[i].get('lastname').touched
+                    "
+                  >
+                    Last Name is required!
+                  </div>
+                </div>
+
+                <div class="form-row mt-5">
+                  <div class="form-group w-100" [formGroupName]="i">
+                    <label class="mb-2" style="font-size: larger">Gender</label>
+                    <select
+                      formControlName="gender"
+                      class="form-control form-select"
+                      name="gender"
+                      id="{{ 'gender' + i }}"
+                    >
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      registrationForm.controls[i]
+                        .get('gender')
+                        .hasError('required') &&
+                      registrationForm.controls[i].get('gender').touched
+                    "
+                  >
+                    Gender is required!
+                  </div>
+                </div>
+
+                <div class="form-row mt-5">
+                  <div class="form-group w-100" [formGroupName]="i">
+                    <label class="mb-2" style="font-size: larger">Email</label>
+                    <input
+                      formControlName="email"
+                      id="{{ 'email' + i }}"
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter Email"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      registrationForm.controls[i]
+                        .get('email')
+                        .hasError('required') &&
+                      registrationForm.controls[i].get('email').touched
+                    "
+                  >
+                    Email is required!
+                  </div>
+                </div>
+
+                <div class="form-row mt-5">
+                  <div class="form-group w-100" [formGroupName]="i">
+                    <label class="mb-2" style="font-size: larger">Age</label>
+                    <input
+                      formControlName="age"
+                      id="{{ 'age' + i }}"
+                      type="number"
+                      class="form-control"
+                      placeholder="Enter Age"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      registrationForm.controls[i]
+                        .get('age')
+                        .hasError('required') &&
+                      registrationForm.controls[i].get('age').touched
+                    "
+                  >
+                    Age is required!
+                  </div>
+                </div>
+
+                <div class="form-row mt-5">
+                  <div class="form-group w-100" [formGroupName]="i">
+                    <label class="mb-2" style="font-size: larger">Mobile</label>
+                    <input
+                      formControlName="phone"
+                      id="{{ 'phone' + i }}"
+                      type="number"
+                      class="form-control"
+                      placeholder="Enter Mobile Number"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      registrationForm.controls[i]
+                        .get('phone')
+                        .hasError('required') &&
+                      registrationForm.controls[i].get('phone').touched
+                    "
+                  >
+                    Mobile Number is required!
+                  </div>
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      registrationForm.controls[i]
+                        .get('phone')
+                        .hasError('pattern') &&
+                      registrationForm.controls[i].get('phone').touched
+                    "
+                  >
+                    Invalid mobile number!
+                  </div>
+                </div>
+
+                <div class="form-row mt-5">
+                  <div class="form-group w-100" [formGroupName]="i">
+                    <label class="mb-2" style="font-size: larger">City</label>
+                    <input
+                      formControlName="city"
+                      id="{{ 'city' + i }}"
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter City"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      registrationForm.controls[i]
+                        .get('city')
+                        .hasError('required') &&
+                      registrationForm.controls[i].get('city').touched
+                    "
+                  >
+                    City is required!
+                  </div>
+                  <div
+                    class="alert alert-danger"
+                    *ngIf="
+                      registrationForm.controls[i]
+                        .get('city')
+                        .hasError('pattern') &&
+                      registrationForm.controls[i].get('city').touched
+                    "
+                  >
+                    Invalid city name!
+                  </div>
+                </div>
+
+                <div class="col-md-6 mt-5">
+                  <button
+                    class="btn btn-danger"
+                    [disabled]="
+                      i === 0 ||
+                      i === 1 ||
+                      f['type'].value == 'Individual' ||
+                      f['type'].value == 'Married Couple'
+                    "
+                    (click)="removePerson(i)"
+                  >
+                    Remove Person {{ i + 1 }}
+                  </button>
+                </div>
+              </div>
+              <!--    </div>  -->
+
+              <div class="form-row mt-5">
+                <div class="form-group w-100">
+                  <label class="mb-2" style="font-size: larger"
+                    >Payment Type</label
+                  >
+                  <select
+                    formControlName="paym"
+                    class="form-control form-select"
+                    name="paym"
+                    id="paym"
+                  >
+                    <option value="Full Payment">Full Registration</option>
+                    <option value="Part Payment">Part Registration</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div
+                  class="alert alert-danger"
+                  *ngIf="f['paym'].errors?.['required'] && f['paym'].touched"
+                >
+                  Payment Type is required!
+                </div>
+              </div>
+
+              <div class="col-md-6 mt-5">
+                <button
+                  class="btn btn-danger"
+                  id="add"
+                  type="button"
+                  [disabled]="isDisabled"
+                  (click)="addPerson()"
+                >
+                  Add Another Person
+                </button>
+              </div>
+
+              <div class="form-row mt-5">
+                <!--Checkbox for agree-->
+                <input
+                  type="checkbox"
+                  formControlName="agree"
+                  class="col-md-2"
+                  style="vertical-align: top"
+                />
+                <label
+                  class="mb-2"
+                  class="checkbox col-md-10"
+                  style="
+                    font-size: small;
+                    padding-bottom: 0.4rem;
+                    margin-top: 0px;
+                  "
+                  >“I hereby confirm and declare that my attendance and presence
+                  at the Encounter with God Conference, organized by Adonai
+                  Ministries, is out of my own free will, volition and sound
+                  judgement”</label
+                >
+                <button
+                  type="button"
+                  class="btn btn-outline-default offset-md-2"
+                  href="#"
+                  (click)="open(consent)"
+                  style="
+                    font-size: xx-small;
+                    padding: 0rem 9px;
+                    font-weight: 400;
+                  "
+                >
+                  Read More
+                </button>
+
+                <div
+                  class="alert alert-danger"
+                  *ngIf="f['agree'].errors?.['required'] && f['agree'].touched "
+                >
+                  Must check in order to submit.
+                </div>
+              </div>
+
+              <div class="form-row mt-5">
+                <button
+                  class="btn btn-danger"
+                  type="submit"
+                  [disabled]="wfcForm.invalid"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 <!-- Modal Terms and Conditions -->
 <ng-template #consent let-modal>
   <div class="modal-header">
-
-      <button type="button" class="close float-end" (click)="modal.dismiss('Cross click')">
-          <span aria-hidden="true">&times;</span>
-      </button>
-      <h5 class="modal-title text-center" id="modal-consent">CONSENT DECLARATION</h5>
+    <button
+      type="button"
+      class="close float-end"
+      (click)="modal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h5 class="modal-title text-center" id="modal-consent">
+      CONSENT DECLARATION
+    </h5>
   </div>
   <div>
-      <p style="padding-left: 2rem; padding-bottom: 2rem; padding-right: 2rem; padding-top: 1rem; font-size:small;">I hereby confirm and declare that my attendance and presence at the Conference, organized by Adonai Ministries, is out of my own free will, volition and sound judgement and not under any undue influence, inducement, or by any act or representation of any kind or character.I hereby affirm that the purpose and intent of my participation in the conference is in pursuit of my personal desire to know more about the faith. It is understood by me that the teaching, preaching and sharing of information is based on the Bible and personal knowledge, and will not hold Adonai Ministries accountable, in any manner or level, any claims against the teachings imparted, which may or may not be in consonance to individual religious belief and faith.
-        <br>I hereby, undertake not to release or distribute any material or information received at the Conference available in the form of text, images, sound, audio, video, software, either in electronic or printable form without prior written approval by an authorized representative from Adonai Ministries and shall accept responsibility and be held liable for any breach thereof.<br>
-      </p>
+    <p
+      style="
+        padding-left: 2rem;
+        padding-bottom: 2rem;
+        padding-right: 2rem;
+        padding-top: 1rem;
+        font-size: small;
+      "
+    >
+      I hereby confirm and declare that my attendance and presence at the
+      Conference, organized by Adonai Ministries, is out of my own free will,
+      volition and sound judgement and not under any undue influence,
+      inducement, or by any act or representation of any kind or character.I
+      hereby affirm that the purpose and intent of my participation in the
+      conference is in pursuit of my personal desire to know more about the
+      faith. It is understood by me that the teaching, preaching and sharing of
+      information is based on the Bible and personal knowledge, and will not
+      hold Adonai Ministries accountable, in any manner or level, any claims
+      against the teachings imparted, which may or may not be in consonance to
+      individual religious belief and faith. <br />I hereby, undertake not to
+      release or distribute any material or information received at the
+      Conference available in the form of text, images, sound, audio, video,
+      software, either in electronic or printable form without prior written
+      approval by an authorized representative from Adonai Ministries and shall
+      accept responsibility and be held liable for any breach thereof.<br />
+    </p>
   </div>
 </ng-template>
